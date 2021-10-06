@@ -1,0 +1,29 @@
+{
+  "name": "hallabol-21",
+  "version": "1.0.0",
+  "description": "Website for Hallabol'21",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reuben27/Hallabol-21.git"
+  },
+  "author": "Reuben Devanesan | Krishnam Hasija | Paras Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reuben27/Hallabol-21/issues"
+  },
+  "homepage": "https://github.com/Reuben27/Hallabol-21#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "google-auth-library": "^7.10.0",
+    "google-spreadsheet": "^3.1.15",
+    "googleapis": "^88.2.0",
+    "nodemon": "^2.0.13"
+  }
+}
