@@ -14,6 +14,10 @@ app.get("/", async (req,res) => {
     res.render("index");
 });
 
+app.get("/team", async (req,res) => {
+    res.render("team");
+});
+
 app.listen(process.env.PORT || 3000, function (){
     console.log("Server running");
 });
