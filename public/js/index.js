@@ -70,6 +70,7 @@ resume = () =>{
   myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }
 
+//Insta Feed
 (function() {
     var i, e, d = document,
       s = "script";
