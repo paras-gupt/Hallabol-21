@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <title>Hallabol'21</title>
+  <link rel = "icon" href = "/images/hallabol-18-logo.png">
+  <!--Bootstrap-->
+  <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href = "css/w3.css">
+  <link rel = "stylesheet" href = "css/futsal-register.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    * {
+      font-family: 'poppins';
+    }
+
+  </style>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+  <div class = "site">  
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+      <button class="w3-bar-item w3-button w3-large" onclick="sidebar_close()" style="margin-top: 10px; margin-bottom: 10px;text-align: right;"><i class='fas fa-angle-double-left' style='font-size:36px'></i></button>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Home &nbsp;&nbsp;&nbsp;&emsp; <i class='fa fa-home' style='font-size:32px'></i></a>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Games &nbsp;&emsp; <i class='fas fa-volleyball-ball	' style='font-size:32px'></i></a>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Team &nbsp;&nbsp;&emsp; <i class='fas fa-user-friends' style='font-size:32px'></i></a>
+    </div>
+
+    <div id = "main"  style= "font-family : 'poppins'">
+      <div class = "row sticky-top" style = "padding-right: 0px; position: sticky; top: 0 !important; background-color: black; clear: both;">
+        <div class = "navbar" style = "width : 100%; padding-right: 50px;">
+          <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+          <div style = "width : 200px; text-align: center;margin-left: auto; margin-right: auto; font-size: 3em;">Hallabol</div>
+          <div style = "color:white;font-size: 1.5em;text-align: center; font-weight:900;"><a href="/logout" style = "outline: none; color: white;">Logout</a></div>
+        </div>
+      </div>
+
+      <div class="w3-container">
+        <div id="first_para" style="margin-top:20px; padding-left: 100px; padding-right: 100px; padding-bottom: 20px; font-size:x-large; margin-top: 6vh; margin-bottom: 5vh; font-weight: 500;">
+          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        </div>
+        <div class = "register-form" style="margin-top:20px; padding-left: 100px; padding-right: 100px; ">
+          <div class="form-group"> <label> Team Name* (Team can consist maximum 5 members) </label> <input name="team_name" id="team_name_" type="text" class="form-control" placeholder="Team name" required> </div>
+          <div class="form-group"> <label> Idea* </label> <textarea id="idea_" maxlength="1000" name="idea" class="form-control " placeholder="Idea"
+                style="height:100px !important;max-height:100px !important;min-height:100px !important;" required></textarea></div>
+            <div class="form-row "> 
+              <div class="form-group col-md-6"> <label> Name of the Leader* </label> <input name="name" id="name_" type="text" class="form-control" placeholder="Name" required> </div>
+              <div class="form-group col-md-6 "> <label for="email"> Email ID of the Leader* </label>
+              <div class="input-group "> <input type="email" name="email" id="email_" class="form-control" placeholder="Email ID" required> </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> <label> Organization/ Institution </label> <input name="institute" id="institute_" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat"> </div>
+            <div class="form-group col-md-6"> <label> Contact Number* </label> <input type="text" name="contact_number_" id="contact_number_" class="form-control" placeholder="Contact Number" pattern="[0-9]{10}" required> </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> <label for="start_up"> Are you a StartUp?* </label> <select name="start_up" id="start_up_" class="form-control" required>
+                <option value="" disabled selected style="display: none">--Please select an option--</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select> </div>
+              <div class="form-group col-md-6"> <label for="present"> Are you going to present your Idea on 23-24 January 2021?* </label> <select name="present" id="present_" class="form-control" required>
+                  <option value="" disabled selected style="display: none">--Please select an option--</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select> </div>
+          </div>
+          <br>
+          <div class="form-group submit" style = "width:100%; align-content: center;"> 
+            <button type="submit" id="btnsbt_" onclick="_submitForm()" class="btn btn-light" type = "button"> Submit </button> 
+          </div>
+        </div>
+      </div>       
+    </div>  
+  </div>
+
+  <!--Scripts-->
+  <script src = "/js/index.js"></script>
+  <script src = "https://apis.google.com/js/platform.js" async defer></script>
+  <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
+  <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
+</body>
