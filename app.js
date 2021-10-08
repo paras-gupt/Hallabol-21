@@ -21,14 +21,6 @@ app.get("/", async (req,res) => {
     res.render("index");
 });
 
-app.get("/team", async (req,res) => {
-    res.render("team");
-});
-
-app.get("/games", async (req,res) => {
-    res.render("games");
-});
-
 app.get("/login", (req,res) => {
     res.render("login");
 });

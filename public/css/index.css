@@ -14,7 +14,8 @@ body, .site {
     box-sizing: border-box;
     max-width: 100vw !important;
     text-align: justify;
-    background-color: #ffffff;
+    background-color: black;
+    color: white;
 }
 
 /*Scrollbar Handle */
@@ -72,4 +73,9 @@ body, .site {
     
     animation: bounce 2s cubic-bezier(.755, .05, .855, .06) forwards,
                roll 3s 2.05s ease forwards;
+}
+
+
+#mySidebar{
+  border-right: 2px solid white;
 }

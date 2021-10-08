@@ -80,3 +80,16 @@ resume = () =>{
     e = d.getElementsByTagName(s)[0];
     e.parentNode.insertBefore(i, e);
   })();
+
+function sidebar_open() {
+    document.getElementById("main").style.marginLeft = "15%";
+    document.getElementById("mySidebar").style.width = "15%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+}
+
+function sidebar_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+}
