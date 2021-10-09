@@ -129,7 +129,7 @@ div.bootCols{
 
 
 #mySidebar{
-  border-right: 3px solid white;
+  border-right: 2px solid white;
 }
 
 @media (max-width: 575px) {

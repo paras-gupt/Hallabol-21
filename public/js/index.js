@@ -81,7 +81,7 @@ resume = () =>{
     e.parentNode.insertBefore(i, e);
   })();
 
-  document.getElementById("main").style.marginLeft = "4%";
+  document.getElementById("main").style.marginLeft = "0%";
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("openNav").style.display = "inline-block";
 
@@ -111,7 +111,7 @@ var currWidth = window.matchMedia("(max-width: 1100px)")
 // currWidth.addEventListener(sidebar_open)
 
 function sidebar_close() {
-    document.getElementById("main").style.marginLeft = "4%";
+    document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("openNav").style.display = "inline-block";
 }
