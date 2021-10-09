@@ -159,3 +159,11 @@ div.bootCols{
 /*  */
 /*  */
 
+.container {
+		height: 70vh;
+}
+svg {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
