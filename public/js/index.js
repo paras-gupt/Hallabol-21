@@ -81,6 +81,11 @@ resume = () =>{
     e.parentNode.insertBefore(i, e);
   })();
 
+  document.getElementById("main").style.marginLeft = "4%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+
+
 function sidebar_open() {
 
     if (currWidth.matches) { // If media query matches
@@ -106,7 +111,7 @@ var currWidth = window.matchMedia("(max-width: 1100px)")
 // currWidth.addEventListener(sidebar_open)
 
 function sidebar_close() {
-    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("main").style.marginLeft = "4%";
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("openNav").style.display = "inline-block";
 }
