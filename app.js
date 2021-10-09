@@ -52,6 +52,14 @@ app.get("/register", checkAuthenticated, async (req,res) => {
     res.render("register");
 });
 
+app.get("/futsal" , async(reqw,res) => {
+    res.render("futsal");
+});
+
+app.get("/futsal-register" , checkAuthenticated, async(reqw,res) => {
+    res.render("futsal-register");
+});
+
 //Function to check whether the user is authenticated or not.
 function checkAuthenticated(req, res, next){
     let token = req.cookies['session-token'];
