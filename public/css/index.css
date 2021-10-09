@@ -40,16 +40,20 @@ div.bootCols{
 }
 
 ::-webkit-scrollbar-track-piece {
-    background-color: rgb(199, 207, 253);
+    /* background-color: rgb(199, 207, 253); */
+    background-color: rgb(211, 211, 211);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #007bff;
+    /* background: #007bff; */
+    background: rgb(113, 121, 126);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(2, 43, 87);
+    /* background: rgb(2, 43, 87); */
+    background: rgb(129, 133, 137)
+    ;
 }
 
 .hallabol_video {
