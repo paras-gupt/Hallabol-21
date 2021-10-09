@@ -79,3 +79,12 @@ body, .site {
 #mySidebar{
   border-right: 3px solid white;
 }
+
+.container {
+		height: 70vh;
+}
+svg {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
