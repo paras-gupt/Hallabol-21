@@ -18,6 +18,22 @@ body, .site {
     color: white;
 }
 
+div.gameName{
+  text-align: center; margin-top: 3vh; font-size: 4vh;
+}
+
+div.bootCols{
+  /* width: 20vw; height: 32vh;  */
+  position:relative;
+  /* background-color: white; */
+  border-radius: 20px;  
+  display: inline-block; 
+  /* margin-top: 10vw; */
+  margin-bottom: 10vh; 
+  top: 2vw; left: 2vw;
+}
+
+
 /*Scrollbar Handle */
 ::-webkit-scrollbar {
     width: 5px;
@@ -79,3 +95,40 @@ body, .site {
 #mySidebar{
   border-right: 3px solid white;
 }
+
+@media (max-width: 575px) {
+  body{font-size: 15px;}
+}
+
+@media (max-width: 767px) {
+  body{font-size: 20px;}
+}
+
+@media (min-width: 768px) {
+  body{font-size: 30px;}
+}
+/*  */
+/*  */
+@media (max-width: 575px) {
+  .setionHeading{font-size: 10px;}
+}
+
+@media (max-width: 767px) {
+  .setionHeading{font-size: 30px;}
+}
+
+@media (min-width: 768px) {
+  .setionHeading{font-size: 40px;}
+}
+/*  */
+/*  */
+@media (max-width: 1100px) {
+  .sidebarFont{font-size: 26px;}
+}
+
+@media (min-width: 1101px) {
+  .sidebarFont{font-size: 20px;}
+}
+
+/*  */
+/*  */
