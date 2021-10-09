@@ -19,7 +19,7 @@ body, .site {
 }
 
 div.gameName{
-  text-align: center; margin-top: 3vh; font-size: 4vh;
+  text-align: center; margin-top: 2vw; font-size: 3.5vh;
 }
 
 .setionHeading{
@@ -29,18 +29,19 @@ div.gameName{
 div.bootCols{
   /* width: 20vw; height: 32vh;  */
   position:relative;
-  /* background-color: white; */
-  border-radius: 20px;  
+  /* background-color: white; */  
   display: inline-block; 
-  /* margin-top: 10vw; */
-  margin-bottom: 10vh; 
-  top: 2vw; left: 2vw;
+    text-align: center;
+  /* margin-top: 10vh; */
+  /* margin-bottom: 10vh;  */
+  /* top: 2vw; left: 2vw; */
 }
 
 
 /*Scrollbar Handle */
 ::-webkit-scrollbar {
     width: 5px;
+    /* display: none; */
 }
 
 ::-webkit-scrollbar-track-piece {
@@ -61,8 +62,10 @@ div.bootCols{
 }
 
 .img > img{
-  padding: 3vw;
+  /* padding: 3vw; */
   margin-bottom: 2vh; 
+  width: 60%;
+  height: 60%;
 }
 
 .contact{
@@ -70,12 +73,19 @@ div.bootCols{
   margin-bottom: 6vh;
 }
 
-/* .tagStag{
-  font-size: 2vw;
-} */
+.tagStag{
+  font-size: 3.5vh;
+}
 
 .carousel-inner img{
-  height: 150vh;
+  height: 55vw;
+  text-align: center;
+  align-content: center;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  /* height: ; */
+  height: 55vw;
 }
 
 .hallabol_video {
