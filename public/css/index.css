@@ -22,6 +22,10 @@ div.gameName{
   text-align: center; margin-top: 3vh; font-size: 4vh;
 }
 
+.setionHeading{
+  font-weight: 600;margin-top:10vh; margin-bottom: 5vh; padding-left: 5vw; padding-right: 5vw; padding-bottom: 3vh;
+}
+
 div.bootCols{
   /* width: 20vw; height: 32vh;  */
   position:relative;
@@ -54,6 +58,24 @@ div.bootCols{
     /* background: rgb(2, 43, 87); */
     background: rgb(129, 133, 137)
     ;
+}
+
+.img > img{
+  padding: 3vw;
+  margin-bottom: 2vh; 
+}
+
+.contact{
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+/* .tagStag{
+  font-size: 2vw;
+} */
+
+.carousel-inner img{
+  height: 150vh;
 }
 
 .hallabol_video {
