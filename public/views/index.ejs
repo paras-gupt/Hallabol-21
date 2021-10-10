@@ -125,11 +125,11 @@
     <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
         <div class="row sticky-top" style="background-color: black; clear: both;">
             <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
+                style="width : 100%; padding-right: 2vw; align-content: center;">
                 <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
                         class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
                 <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
+                    style="width : 27vw; text-align: center;margin-left: 35%;font-size: 1.6em;">
                     Hallabol
                 </div>
                 <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
@@ -141,6 +141,7 @@
                 <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
                     style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
                     <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+                <div>
                 <% if (user.name != null) { %>
                   <a href="" style="text-decoration: none; font-size: 0.8em;"> Hey, <%= user.name %></a>
                 <% } else { %>
@@ -149,6 +150,7 @@
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
+                </div>
             </div>
         </div>
 
