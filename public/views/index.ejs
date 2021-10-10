@@ -3,7 +3,7 @@
 <head>
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <title>Hallabol'21</title>
+  <title>Hallabol '21</title>
   <link rel = "icon" href = "/images/hallabol-18-logo.png">
   <!--Bootstrap-->
   <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -25,49 +25,92 @@
 
 <body>
 
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-ball'></i>
-      <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+
+  
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-ball'></i>
+        <div class="logo_name">Hallabol!</div>
+        <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
+      </div>
+
+      <ul class="nav-list" style="padding-inline-start: 7px;">
+        <!-- <li>
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li> -->
+        <li>
+          <a href="#">
+            <i class='bx bx-home bx-md'></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#game">
+            <i class='bx bx-game bx-md'></i>
+            <span class="links_name">Games</span>
+          </a>
+          <span class="tooltip">Games</span>
+        </li>
+        <li>
+          <a href="#team">
+            <i class='bx bx-group bx-md'></i>
+            <span class="links_name">Teams</span>
+          </a>
+          <span class="tooltip">Teams</span>
+        </li>
+        <li>
+          <a href="/logout">
+            <i class='bx bx-log-out bx-md'></i>
+            <span class="links_name">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+        
+      </ul>
+
+
+      <div class="navHorList row" id = "navHorList">
+        <div class="col-lg-8 col-md-10">
+          <ul class="list-inline text-center" display: inline;">
+            <li class = "list-inline-item">
+              <a href="#">
+                <i class='bx bx-home bx-md'></i>
+                <span class="links_name">Home</span>
+              </a>
+              <span class="tooltip">Home</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="#game">
+                <i class='bx bx-game bx-md'></i>
+                <span class="links_name">Games</span>
+              </a>
+              <span class="tooltip">Games</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="#team">
+                <i class='bx bx-group bx-md'></i>
+                <span class="links_name">Teams</span>
+              </a>
+              <span class="tooltip">Teams</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="/logout">
+                <i class='bx bx-log-out' ></i>
+                <span class="links_name">Logout</span>
+              </a>
+              <span class="tooltip">Logout</span>
+            </li>
+          </ul>
+        
+        </div>
+      </div>
+
+
+
     </div>
-    <ul class="nav-list" style="padding-inline-start: 7px;">
-      <!-- <li>
-        <i class='bx bx-search'></i>
-        <input type="text" placeholder="Search...">
-        <span class="tooltip">Search</span>
-      </li> -->
-      <li>
-        <a href="#">
-          <i class='bx bx-home bx-md'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="#game">
-          <i class='bx bx-game bx-md'></i>
-          <span class="links_name">Games</span>
-        </a>
-        <span class="tooltip">Games</span>
-      </li>
-      <li>
-        <a href="#team">
-          <i class='bx bx-group bx-md'></i>
-          <span class="links_name">Teams</span>
-        </a>
-        <span class="tooltip">Teams</span>
-      </li>
-      <li>
-        <a href="/logout">
-          <i class='bx bx-log-out' ></i>
-          <span class="links_name">Logout</span>
-        </a>
-        <span class="tooltip">Logout</span>
-      </li>
-      
-    </ul>
-  </div>
 
   <div class = "site" style="padding-left: 40px;">  
 
@@ -80,14 +123,14 @@
 
 
     <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
+        <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
             <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
+                style="width : 100%; padding-right: 2vw; align-content: center;">
                 <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
                         class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
                 <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
+                    style="width : 27vw; text-align: center;margin-left: 32%; font-size: 1.6em;">
+                    Hallabol '21
                 </div>
                 <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
                     style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
@@ -98,14 +141,16 @@
                 <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
                     style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
                     <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+                <div style="padding-bottom: 1vw;">
                 <% if (user.name != null) { %>
-                  <a href="" style="text-decoration: none; font-size: 0.8em;"> Hey, <%= user.name %></a>
+                  <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
                 <% } else { %>
                 <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">                    
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
+                </div>
             </div>
         </div>
 
@@ -399,7 +444,7 @@
                             stroke-width="3" />
                     </g>
                 </g>
-                <g class="soccer1_line" data-name="LINE"  style="fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px" >
+                <g class="soccer1_line" data-name="LINE"  style="fill:none;stroke:#b9ffb7;stroke-linejoin:round;stroke-width:2px" >
                     <polygon points="1803.31 1171.71 1843.78 1399.05 1853.86 1100.2 1803.31 1171.71" />
                     <polygon points="1803.31 1171.71 1744.04 1076.01 1853.86 1100.2 1803.31 1171.71" />
                     <polygon points="1803.31 1171.71 1931.65 1119.43 1853.86 1100.2 1803.31 1171.71" />
@@ -586,7 +631,7 @@
                 <!-- <title>
                     soccer 2
                 </title> -->
-                <g class="soccer2_fill" data-name="FILL" style="fill:#fff;opacity:0.30000001192092896">
+                <g class="soccer2_fill" data-name="FILL" style="fill:#ff5c85;opacity:0.30000001192092896">
                     <polygon points="1669.27 544.27 1797.94 654.94 1865.94 535.61 1669.27 544.27" />
                     <polygon points="1647.94 687.61 1786.61 741.61 1797.94 654.94 1647.94 687.61" />
                     <polygon points="1669.27 544.27 1845.27 386.94 1865.94 535.61 1669.27 544.27" />
@@ -777,7 +822,7 @@
                     <polygon points="2245.44 1164.11 2242.69 1184.86 2258.19 1184.61 2245.44 1164.11" />
                     <polygon points="2257.94 1153.11 2257.69 1113.86 2248.19 1159.36 2257.94 1153.11" />
                 </g>
-                <g class="soccer2_extra-line" data-name="Extra Line" style="fill:none;stroke:#fff">
+                <g class="soccer2_extra-line" data-name="Extra Line" style="fill:none;stroke:#b9ffb7">
                     <path d="M81.61,1351.1L897.51,1600.8" ></path>
                     <path transform="rotate(-72.96 489.5 1475.8)" width="2" height="853.25" d="M488.5 1049.2 L490.5 1049.2 L490.5 1902.45 L488.5 1902.45 Z" ></path>
                     <path d="M1218.2,573.2L1056.9,337.61" ></path>
@@ -895,7 +940,7 @@
                 <!-- <title>
                     basketball
                 </title> -->
-                <g class="basket_fill" data-name="FILL" style="fill:#fff;opacity:0.30000001192092896;isolation:isolate">
+                <g class="basket_fill" data-name="FILL" style="fill:#96dced;opacity:0.30000001192092896;isolation:isolate">
                     <polyline points="1326.7 558.63 1382.61 609.4 1301.17 662.21 1326.7 558.63" />
                     <polygon points="1382.61 609.4 1401.06 656.98 1301.17 662.21 1382.61 609.4" />
                     <polyline points="1301.17 662.21 1222.39 570.3 1141.92 527.54 1301.17 662.21 1301.17 662.21" />
@@ -1131,7 +1176,7 @@
                 <path d="M1882.92,1397.44a1,1,0,0,0,0,2h2a1,1,0,0,0,.69-.27,1,1,0,0,0-.68-1.73Z" style="fill:#fff"></path>
                 <path d="M1842.92,1397.43a1,1,0,0,0,0,2h2a1,1,0,0,0,.69-.27,1,1,0,0,0-.68-1.73Z" style="fill:#fff"></path>
                 </g>
-                <g class="basket_line" style="fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px" data-name="LINE">
+                <g class="basket_line" style="fill:none;stroke:#b9ffb7;stroke-linejoin:round;stroke-width:2px" data-name="LINE">
                    
                     <path  d="M1326.7,558.63L1382.61,609.4L1301.17,662.21L1326.7,558.63"></path>
                     <path d="M1382.61,609.4L1401.06,656.98L1301.17,662.21L1382.61,609.4Z"></path>
@@ -1370,7 +1415,7 @@
           <br>
         </div>
         <div class = "setionHeading">
-          Featured Sports So Far!
+          <span style="background-color: #b9ffb7; color: #090A0B; padding: 0.5vw 2vw 0.5vw 2vw; width:100px; border-radius: 10px; font-size:1.2em">Featured Sports So Far!</span>
         </div>
 
         <!-- <div style = "height: 10vh; width:100vw;margin: 0; padding: 0; background-color: white;"></div> -->
@@ -1384,43 +1429,43 @@
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Gully Cricket</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Kho-Kho</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Foot Volley</div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Throwball</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Carrom</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">4-a-Side Baddy</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">DodgeBall</div>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Seven Stones</div>
             </div>
             <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;;">
-              <div class = "gameName">Cricket</div>
+              <div class = "gameName">Frisbee</div>
             </div>
             <!-- <div class="col-lg-3  col-sm-6 col-6 bootCols">
               <img src="https://www.pngarea.com/pngs/83/6831046_paint-splatters-png-sports-graphics-transparent-png-transparent.png" width="70%" height="60%" style="border-radius: 5%;">
@@ -1433,35 +1478,55 @@
           </div>
         </div>
         <br>
-        <hr style="margin-left: 6%; margin-right: 6%;">
+        <!-- <hr style="margin-left: 6%; margin-right: 6%;"> -->
         <!-- <br> -->
 
         <div class="container-fluid" style="padding:5%;">
         <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-12 col-md-12 bootCols" style="width: 100%; height: 100%; padding-top: 4%; padding-bottom: 4%;padding-left: 4%; padding-right: 4%;">
-          <video class = "video1" width="80%" height="40%" autoplay muted loop controls="controls">
+          <div class="col-lg-7 col-md-12 col-sm-12 bootCols" style="width: 100%; height: 100%; padding-top: 4%; padding-bottom: 2%;padding-left: 2%; padding-right: 4%;">
+          <video class = "video1" width="100%" height="60%" autoplay muted loop controls="controls">
             <source src="/video/hallabol.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           </div>
-          <div class=" sectionHeading col-lg-6 col-md-12 col-md-12 bootCols" style="text-align: justify;padding-top: 3%; padding-bottom: 3%; padding-right: 7%; padding-left: 1%;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi dolorem illo nihil deserunt esse laboriosam aperiam beatae. Eius nam optio provident eveniet maxime nostrum dignissimos fugit facilis, reiciendis aut!
+          <div class=" sectionHeading col-lg-5 col-md-12 col-md-12 bootCols" style="text-align: justify;padding-top: 5%; padding-bottom: 3%; padding-right: 7%; padding-left: 1%; font-size: 0.8em;">
+            Mark your calendars for some of the best happening nights at IITGN!
+            Yes, we are talking about HallaBol - yay - This time HallaBol will be held from 14th October to 26th October. Here's to 13 nights you will never forget!
           </div>
         </div>
       </div>
         
-        <hr style="margin-left: 6%; margin-right: 6%; margin-top: 1%;">
+        <!-- <hr style="margin-left: 6%; margin-right: 6%; margin-top: 1%;"> -->
         <!-- <br> -->
         <div id = "team">
           <br>
         </div>
-          <div class = "setionHeading" style= " font-weight: 600;  margin-bottom: 5vh; padding-left: 5%; padding-right: 5%; padding-bottom: 3vh;">
-            Our Team
+          <div class = "setionHeading" style= "  margin-bottom: 5vh; padding-left: 5%; padding-right: 5%; ">
+            <span style="background-color: #ff5c85; color: #090A0B; padding: 0.5vw 2vw 0.5vw 2vw; width:100px; border-radius: 10px; font-size:1.2em">Our Team</span>
           </div>
       
 
         <!--Event Coordinators-->
-    <h1 class="heading-sites" style="padding-left: 5%; padding-right: 5%; padding-bottom: 5vh;">Event Coordinators</h1>
+    <h1 class="heading-sites" style="padding-left: 5%; padding-right: 5%; padding-bottom: 5vh;">Sports Secretary</h1>
+    <div class="one-person" style="padding-left: 5%; padding-right: 5%;">
+        <div class="row">
+            <div class="col-lg-3" style="margin-left: auto; margin-right: auto;">
+                <div class="contact" >
+                    <div class="img">
+                        <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
+                        <span class="tagStag">
+                            Gaurav Sharma
+                        </span>
+                    </div>
+                    <div class = "tagStag-email">sharma.gaurav@iitgn.ac.in</div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <!-- +========================++ -->
+    <h1 class="heading-sites" style="padding-left: 5%; padding-right: 5%; padding-bottom: 5vh;">Core Members</h1>
     <div class="four-person" style="padding-left: 5%; padding-right: 5%;">
         <div class="row">
             <div class="col-lg-3  col-sm-6 col-6">
@@ -1469,10 +1534,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Akhilesh Chauhan
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">akhilesh.c@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1482,10 +1547,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Jitendra Kumar
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">jitender.kumar@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1495,10 +1560,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Kshitija Anam
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">kshitija.anam@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1509,10 +1574,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Devangshu Nandi
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">devangshun@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1523,7 +1588,7 @@
     <!-- <hr style="margin-left: 7vw; margin-right: 5vw;"> -->
     <!-- <br> -->
     <!--Event Organizers-->
-    <h1 class="heading-sites" style="padding-left: 5%; padding-right: 5%; padding-bottom: 5vh;">Event Organizers</h1>
+    <h1 class="heading-sites" style="padding-left: 5%; padding-right: 5%; padding-bottom: 5vh;">Web-Dev Team</h1>
     <div class="four-person" style="padding-left: 5%; padding-right: 5%;">
         <div class="row">
             <div class="col-lg-3  col-sm-6 col-6">
@@ -1531,10 +1596,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Reuben Devanesan
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">reuben.sd@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1544,10 +1609,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Paras Gupta
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">gupta.paras@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1557,10 +1622,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Nipun Mahajan
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">mahajan.n@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1571,10 +1636,10 @@
                     <div class="img">
                         <img src="/images/temp/f.jpg" class="img-fluid mx-auto d-block rounded-circle contact-img">
                         <span class="tagStag">
-                            Name
+                            Krishnam Hasija
                         </span>
                     </div>
-                    <div class = "tagStag"> Email id: </div>
+                    <div class = "tagStag-email">krishnam.h@iitgn.ac.in</div>
                 </div>
             </div>
             <br>
@@ -1592,6 +1657,14 @@
                     <a href="https://www.facebook.com/iitgn.official/" target="_blank" id = "footer-icon">
                       <span class="fa-stack fa-lg">
                         <i class='bx bxl-facebook' ></i>
+                        <!-- <i class="bx bxl-facebook"></i> -->
+                      </span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item" >
+                    <a href="https://www.instagram.com/hallabol_iitgn/?hl=en" target="_blank" id = "footer-icon">
+                      <span class="fa-stack fa-lg">
+                        <i class='bx bxl-instagram' ></i>
                         <!-- <i class="bx bxl-facebook"></i> -->
                       </span>
                     </a>
@@ -1621,7 +1694,7 @@
                     </a>
                   </li>
                 </ul>
-                <p class="copyright text-muted text-center" style="font-size:70%;">Copyright &copy; Hallabol 2021</p>
+                <p style="font-size:70%; text-align: center; color: #E4EBF1;">Copyright &copy; Hallabol 2021</p>
               </div>
             </div>
         </div>

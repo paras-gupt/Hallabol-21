@@ -14,12 +14,17 @@ body, .site {
   box-sizing: border-box;
   max-width: 100vw !important;
   text-align: justify;
-  background-color: black;
+  background-color: #090A0B;
   color: white;
 }
 
 div.gameName{
 text-align: center; margin-top: 2vw; font-size: 3.5vh;
+}
+
+div.gameName:hover{
+  color: #96dced;
+  cursor: pointer;
 }
 
 .setionHeading{
@@ -74,8 +79,13 @@ margin-bottom: 6vh;
 }
 
 .tagStag{
-font-size: 3.5vh;
+font-size: 3vh;
+font-family: 'Lato';
 }
+.tagStag-email{
+  font-size: 2.5vh;
+  font-family: 'Lato';
+  }
 
 .carousel-inner img{
 height: 55vw;
@@ -96,8 +106,8 @@ height: 55vw;
 }
 
 .video1{
-margin-left: 10%;
-margin-top: 5%;
+margin: auto;
+display: block;
 float: left;
 border-radius: 10px;
 }
@@ -186,17 +196,16 @@ position: relative;
 }
 
 #login_ {
-color: black;
-margin-right: 30;
+color: #090A0B;
+margin-right: 10px;
 background-color: white;
 border-radius: 8px;
 width: 90px;
-margin-right: 15px;
 /* background-color: cadetblue; */
 }
 
 #logout_ {
-  color: black;
+  color: #090A0B;
   margin-right: 30;
   background-color: white;
   border-radius: 8px;
@@ -209,20 +218,14 @@ margin-right: 15px;
 font-family: "poppins";
 }
 
-.video1{
-margin-left: 10%;
-margin-top: 5%;
-float: left;
-border-radius: 10px;
-}
 
 .sidebar{
 position: fixed;
 left: 0;
 top: 0;
 height: 100%;
-width: 78px;
-background:black;
+width: 80px;
+background:#090A0B;
 padding: 0;
 z-index: 99;
 transition: all 0.5s ease;
@@ -289,7 +292,7 @@ top: -20px;
 left: calc(100% + 15px);
 /* left: 0; */
 z-index: 3;
-background: black;
+background: #090A0B;
 padding: 6px 12px;
 border-radius: 4px;
 font-size: 15px;
@@ -320,7 +323,7 @@ width: 50px;
 border: none;
 border-radius: 12px;
 transition: all 0.5s ease;
-background: #1d1b31;
+background: #090A0B;
 }
 .sidebar.open input{
 padding: 0 20px 0 50px;
@@ -335,14 +338,14 @@ border-radius: 12px;
 align-items: center;
 text-decoration: none;
 transition: all 0.4s ease;
-background: #11101D;
+background: #090A0B;
 }
 .sidebar li a:hover{
 background: #FFF;
 }
 .sidebar li a .links_name{
 color: white;
-font-size: 15px;
+font-size: 25px;
 font-weight: 400;
 white-space: nowrap;
 opacity: 0;
@@ -356,7 +359,7 @@ pointer-events: auto;
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i{
 transition: all 0.5s ease;
-color: #11101D;
+color: #090A0B;
 }
 .sidebar li i{
 height: 50px;
@@ -396,4 +399,55 @@ a:hover{
   /* background-color: white; */
   text-decoration: none;
   color: inherit;
+}
+
+#navHorList{
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-list {
+      display:none;
+  }
+
+  /* .navHorList{
+    display:block;
+  } */
+
+  .sidebar{
+    height: 5vh;
+    background-color: #090A0B;
+  }
+
+  .site{
+    /* top:10vh; */
+    left:0%;
+    width: 100%;
+  }
+
+  .sidebar.open ~ .site{
+    left: 0%;
+    width: 100%;
+    top: 10vh;
+    height: calc(100% - 20vh);
+    /* height: 80%; */
+    /* margin-top: 20%; */
+  }
+
+  
+
+  .sidebar.open{
+    width: 100vw;
+    height: 20vh;
+  }
+/* 
+  #stickyTop{
+    position: sticky; top: 0;
+  } */
+
+}
+
+.heading-sites{
+  font-size: 1.1em;
+  font-family: 'poppins';
 }
