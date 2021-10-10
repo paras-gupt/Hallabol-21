@@ -1,4 +1,5 @@
 const express  = require("express");
+var router = express.Router()
 const ejs = require('ejs');
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
@@ -11,6 +12,7 @@ app.set('views', './public/views');
 app.set ("view engine", "ejs");
 app.use(express.json());
 app.use(cookieParser());
+app.use("/", router);
 
 //Google Authentication Library
 const {OAuth2Client} = require('google-auth-library');
@@ -20,7 +22,7 @@ const client = new OAuth2Client(CLIENT_ID);
 var user = {};
 var lastvisitedroute = "/";
 var loginclick = false;
-app.get("/", async (req,res) => {
+router.get("/", async (req,res) => {
     if (req.user != null){user = req.user};
     // console.log(user.name);
     if(loginclick == false){
@@ -32,12 +34,12 @@ app.get("/", async (req,res) => {
     
 });
 
-app.get("/login", (req,res) => {
+router.get("/login", (req,res) => {
     loginclick = true;
     res.render("login");
 }); 
 
-app.post("/login", (req,res) => {
+router.post("/login", (req,res) => {
     let token = req.body.token;
     //console.log(token);
     async function verify() {
@@ -59,128 +61,128 @@ app.post("/login", (req,res) => {
     }).catch(console.error);
 });
  
-app.get('/logout', (req, res)=>{
+router.get('/logout', (req, res)=>{
     res.clearCookie('session-token');
     user = {};
     loginclick = false;
     res.redirect('/');
 }) 
  
-app.get("/futsal" , async(req,res) => {
+router.get("/futsal" , async(req,res) => {
     lastvisitedroute = '/futsal';
     if (req.user != null){user = req.user};
     res.render("futsal", {user: user});
 });
 
-app.get("/futsal-register" , checkAuthenticated, async(req,res) => {
+router.get("/futsal-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/futsal-register';
     if (req.user != null){user = req.user};
     res.render("futsal-register", {user:user});
 });
 
-app.get("/4-a-side-baddy" , async(req,res) => {
+router.get("/4-a-side-baddy" , async(req,res) => {
     lastvisitedroute = '/4-a-side-baddy';
     if (req.user != null){user = req.user};
     res.render("4-a-side-baddy", {user: user});
 });
 
-app.get("/4-a-side-baddy-register" , checkAuthenticated, async(req,res) => {
+router.get("/4-a-side-baddy-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/4-a-side-baddy-register';
     if (req.user != null){user = req.user};
     res.render("4-a-side-baddy-register", {user:user});
 });
 
-app.get("/carrom" , async(req,res) => {
+router.get("/carrom" , async(req,res) => {
     lastvisitedroute = '/carrom';
     if (req.user != null){user = req.user};
     res.render("carrom", {user: user});
 });
 
-app.get("/carrom-register" , checkAuthenticated, async(req,res) => {
+router.get("/carrom-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/carrom-register';
     if (req.user != null){user = req.user};
     res.render("carrom-register", {user:user});
 });
 
-app.get("/dodgeball" , async(req,res) => {
+router.get("/dodgeball" , async(req,res) => {
     lastvisitedroute = '/dodgeball';
     if (req.user != null){user = req.user};
     res.render("dodgeball", {user: user});
 });
 
-app.get("/dodgeball-register" , checkAuthenticated, async(req,res) => {
+router.get("/dodgeball-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/dodgeball-register';
     if (req.user != null){user = req.user};
     res.render("dodgeball-register", {user:user});
 });
 
-app.get("/foot-volley" , async(req,res) => {
+router.get("/foot-volley" , async(req,res) => {
     lastvisitedroute = '/foot-volley';
     if (req.user != null){user = req.user};
     res.render("foot-volley", {user: user});
 });
 
-app.get("/foot-volley-register" , checkAuthenticated, async(req,res) => {
+router.get("/foot-volley-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/foot-volley-register';
     if (req.user != null){user = req.user};
     res.render("foot-volley-register", {user:user});
 });
 
-app.get("/frisbee" , async(req,res) => {
+router.get("/frisbee" , async(req,res) => {
     lastvisitedroute = '/frisbee';
     if (req.user != null){user = req.user};
     res.render("frisbee", {user: user});
 });
 
-app.get("/frisbee-register" , checkAuthenticated, async(req,res) => {
+router.get("/frisbee-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/frisbee-register';
     if (req.user != null){user = req.user};
     res.render("frisbee-register", {user:user});
 });
 
-app.get("/gully-cricket" , async(req,res) => {
+router.get("/gully-cricket" , async(req,res) => {
     lastvisitedroute = '/gully-cricket';
     if (req.user != null){user = req.user};
     res.render("gully-cricket", {user: user});
 });
 
-app.get("/gully-cricket-register" , checkAuthenticated, async(req,res) => {
+router.get("/gully-cricket-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/gully-cricket-register';
     if (req.user != null){user = req.user};
     res.render("gully-cricket-register", {user:user});
 });
 
-app.get("/kho-kho" , async(req,res) => {
+router.get("/kho-kho" , async(req,res) => {
     lastvisitedroute = '/kho-kho';
     if (req.user != null){user = req.user};
     res.render("kho-kho", {user: user});
 });
 
-app.get("/kho-kho-register" , checkAuthenticated, async(req,res) => {
+router.get("/kho-kho-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/kho-kho-register';
     if (req.user != null){user = req.user};
     res.render("kho-kho-register", {user:user});
 });
 
-app.get("/seven-stones" , async(req,res) => {
+router.get("/seven-stones" , async(req,res) => {
     lastvisitedroute = '/seven-stones';
     if (req.user != null){user = req.user};
     res.render("seven-stones", {user: user});
 });
 
-app.get("/seven-stones-register" , checkAuthenticated, async(req,res) => {
+router.get("/seven-stones-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/seven-stones-register';
     if (req.user != null){user = req.user};
     res.render("seven-stones-register", {user:user});
 });
 
-app.get("/throwball" , async(req,res) => {
+router.get("/throwball" , async(req,res) => {
     lastvisitedroute = '/throwball';
     if (req.user != null){user = req.user};
     res.render("throwball", {user: user});
 });
 
-app.get("/throwball-register" , checkAuthenticated, async(req,res) => {
+router.get("/throwball-register" , checkAuthenticated, async(req,res) => {
     lastvisitedroute = '/throwball-register';
     if (req.user != null){user = req.user};
     res.render("throwball-register", {user:user});
