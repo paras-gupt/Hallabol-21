@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset = "UTF-8">
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <meta name = "viewport" content = "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
   <title>Hallabol '21</title>
   <link rel = "icon" href = "/images/hallabol-18-logo.png">
   <!--Bootstrap-->
@@ -30,8 +30,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -46,70 +47,113 @@
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
-          <span class="links_name">Teams</span>
+          <span class="links_name">Our Team</span>
         </a>
-        <span class="tooltip">Teams</span>
+        <span class="tooltip">Our Team</span>
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
       
     </ul>
+
+
+    <div class="navHorList row" id = "navHorList">
+      
+        <ul class="list-inline text-center" style = "display: block;">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <li class = "list-inline-item">
+            <a href="/">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <li class = "list-inline-item">
+            <a href="#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <li class = "list-inline-item">
+            <a href="#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <li class = "list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out bx-md' ></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+          </div>
+        </ul>
+      
+      </div>
+    
+
+
+
   </div>
 
-  <div class = "site">  
+<div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------->
 
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
-    </div>
+  <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+  </div>
 
- <!---------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------->
 
 
-    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-      <div class="row sticky-top" style="background-color: black; clear: both;">
-        <div class="navbar" style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-            <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                    class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-            <div class="sectionHeading"
-                style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                Hallabol
-            </div>
-            <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                <i class='bx bx-home' style='font-size:100%;'></i></a>
-            <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-            <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
-            <% if (user.name != null) { %>
-              <a href="" style="text-decoration: none; font-size: 0.8em;"> Hey, <%= user.name %></a>
-            <% } else { %>
-            <div  id = "login_"
-                style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
-                <a href="/login" style="text-decoration: none;">Login</a>
-            </div>
-            <% } %>
+  <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+          <div class="navbar" style="width : 100%; padding-right: 2vw; align-content: center;">
+              
+              <div class="sectionHeading"
+                  style="width : 27vw;margin-left: 36%; text-align: center; font-size: 1em;">
+                  Hallabol&nbsp'21
+              </div>
+
+              <div style="padding-right: 2vh;padding-bottom: 1vw;">
+                <% if (user.name != null) { %>
+                  <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
+                <% } else { %>
+                <div  id = "login_"
+                    style="color:#090A0B ; width: 100%;text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    <a href="/login" style="text-decoration: none;">Login</a>
+                </div>
+                <% } %>
+              </div>
+              
           </div>
-        </div>
+      </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+  <div id = "main"  style= "font-family : 'poppins';">
 
  <!---------------------------------------------------------------------------------------------->
 
@@ -119,8 +163,7 @@
 
       <div class="w3-container">
         <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
-      </div> 
+                 </div> 
 
       <!-- <div style = "align-content: center; width: 100%;">
         <a href = "/futsal-register"type="button" class="btn btn-light" style= "width:10%; margin-right: auto; margin-left: auto; display: block;">Register</a>
@@ -272,6 +315,7 @@
   </div>
 
   <!--Scripts-->
+  <script src = "/js/futsal.js"></script>
   <script src = "/js/throwball-register.js"></script>
   <script src = "https://apis.google.com/js/platform.js" async defer></script>
   <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>

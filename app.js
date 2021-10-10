@@ -58,7 +58,7 @@ app.post("/login", (req,res) => {
         req.user = user;
     }).catch(console.error);
 });
-
+ 
 app.get('/logout', (req, res)=>{
     res.clearCookie('session-token');
     user = {};

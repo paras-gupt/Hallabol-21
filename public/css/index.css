@@ -259,6 +259,7 @@ opacity: 1;
 position: absolute;
 top: 50%;
 right: 0;
+left:0;
 transform: translateY(-50%);
 font-size: 35px;
 text-align: center;
@@ -341,7 +342,7 @@ transition: all 0.4s ease;
 background: #090A0B;
 }
 .sidebar li a:hover{
-background: #FFF;
+background: black;
 }
 .sidebar li a .links_name{
 color: white;
@@ -428,8 +429,9 @@ a:hover{
   .sidebar.open ~ .site{
     left: 0%;
     width: 100%;
-    top: 10vh;
-    height: calc(100% - 20vh);
+    top: 60vh; 
+    /* RESPONSIVE SIDEBAR HEIGHT */
+    height: calc(100% - 90vh);
     /* height: 80%; */
     /* margin-top: 20%; */
   }
@@ -438,7 +440,7 @@ a:hover{
 
   .sidebar.open{
     width: 100vw;
-    height: 20vh;
+    height: 80vh;
   }
 /* 
   #stickyTop{
