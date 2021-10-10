@@ -73,6 +73,10 @@ width: 60%;
 height: 60%;
 }
 
+.img{
+  line-height: .6em;
+}
+
 .contact{
 text-align: center;
 margin-bottom: 6vh;
@@ -411,6 +415,10 @@ a:hover{
       display:none;
   }
 
+  div.gameName{
+    text-align: center; margin-top: 2vw; font-size: 3.2vw;
+    }
+
   /* .navHorList{
     display:block;
   } */
@@ -429,10 +437,11 @@ a:hover{
   .sidebar.open ~ .site{
     left: 0%;
     width: 100%;
-    top: 60vh; 
+    top: 100vh; 
     /* RESPONSIVE SIDEBAR HEIGHT */
-    height: calc(100% - 90vh);
-    /* height: 80%; */
+    /* height: calc(100% - 100vh); */
+    /* height: 0; */
+    height: 100%;
     /* margin-top: 20%; */
   }
 
@@ -440,7 +449,7 @@ a:hover{
 
   .sidebar.open{
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
   }
 /* 
   #stickyTop{
