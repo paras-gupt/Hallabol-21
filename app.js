@@ -14,7 +14,7 @@ app.use(cookieParser());
 
 //Google Authentication Library
 const {OAuth2Client} = require('google-auth-library');
-const CLIENT_ID = '473236609433-9gom3rgoo2h0iacdpqo5e9hqt6hqa00k.apps.googleusercontent.com';
+const CLIENT_ID = '502067726700-5b2vgau8ntkvk4iu767m8b1eed7ec8t1.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
 var user = {};
