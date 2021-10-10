@@ -96,8 +96,8 @@ height: 55vw;
 }
 
 .video1{
-margin-left: 10%;
-margin-top: 5%;
+margin: auto;
+display: block;
 float: left;
 border-radius: 10px;
 }
@@ -208,12 +208,6 @@ width: 90px;
 font-family: "poppins";
 }
 
-.video1{
-margin-left: 10%;
-margin-top: 5%;
-float: left;
-border-radius: 10px;
-}
 
 .sidebar{
 position: fixed;
