@@ -14,7 +14,7 @@ body, .site {
   box-sizing: border-box;
   max-width: 100vw !important;
   text-align: justify;
-  background-color: black;
+  background-color: #011627;
   color: white;
 }
 
@@ -186,7 +186,7 @@ position: relative;
 }
 
 #login_ {
-color: black;
+color: #011627;
 margin-right: 10px;
 background-color: white;
 border-radius: 8px;
@@ -195,7 +195,7 @@ width: 90px;
 }
 
 #logout_ {
-  color: black;
+  color: #011627;
   margin-right: 30;
   background-color: white;
   border-radius: 8px;
@@ -215,7 +215,7 @@ left: 0;
 top: 0;
 height: 100%;
 width: 78px;
-background:black;
+background:#011627;
 padding: 0;
 z-index: 99;
 transition: all 0.5s ease;
@@ -282,7 +282,7 @@ top: -20px;
 left: calc(100% + 15px);
 /* left: 0; */
 z-index: 3;
-background: black;
+background: #011627;
 padding: 6px 12px;
 border-radius: 4px;
 font-size: 15px;
@@ -406,7 +406,7 @@ a:hover{
 
   .sidebar{
     height: 5vh;
-    background-color: black;
+    background-color: #011627;
   }
 
   .site{
