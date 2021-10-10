@@ -391,3 +391,9 @@ margin: 18px
   display: none;
 }
 }
+
+a:hover{
+  /* background-color: white; */
+  text-decoration: none;
+  color: inherit;
+}
