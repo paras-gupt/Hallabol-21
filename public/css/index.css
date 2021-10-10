@@ -279,7 +279,7 @@ svg {
   left: calc(100% + 15px);
   /* left: 0; */
   z-index: 3;
-  background: #fff;
+  background: black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
   border-radius: 4px;
@@ -348,7 +348,7 @@ svg {
   background: #FFF;
 }
 .sidebar li a .links_name{
-  color: #fff;
+  color: black;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
