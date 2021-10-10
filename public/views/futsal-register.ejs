@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <title>Hallabol'21</title>
+  <link rel = "icon" href = "/images/hallabol-18-logo.png">
+  <!--Bootstrap-->
+  <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href = "css/w3.css">
+  <link rel = "stylesheet" href = "css/futsal-register.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    * {
+      font-family: 'poppins';
+    }
+
+  </style>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+  <div class = "site">  
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+      <button class="w3-bar-item w3-button w3-large" onclick="sidebar_close()" style="margin-top: 10px; margin-bottom: 10px;text-align: right;"><i class='fas fa-angle-double-left' style='font-size:36px'></i></button>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Home &nbsp;&nbsp;&nbsp;&emsp; <i class='fa fa-home' style='font-size:32px'></i></a>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Games &nbsp;&emsp; <i class='fas fa-volleyball-ball	' style='font-size:32px'></i></a>
+      <a href="/" class="w3-bar-item w3-button" style="font-size: 24px;text-decoration : none; text-align: center;">Team &nbsp;&nbsp;&emsp; <i class='fas fa-user-friends' style='font-size:32px'></i></a>
+    </div>
+
+    <div id = "main"  style= "font-family : 'poppins'">
+      <div class = "row sticky-top" style = "padding-right: 0px; position: sticky; top: 0 !important; background-color: black; clear: both;">
+        <div class = "navbar" style = "width : 100%; padding-right: 50px;">
+          <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+          <div style = "width : 200px; text-align: center;margin-left: auto; margin-right: auto; font-size: 3em;">Hallabol</div>
+          <div style = "color:white;font-size: 1.5em;text-align: center; font-weight:900;"><a href="/logout" style = "outline: none; color: white;">Logout</a></div>
+        </div>
+      </div>
+
+      <div class="w3-container">
+        <div id="first_para" style="margin-top:20px; padding-left: 100px; padding-right: 100px; padding-bottom: 20px; font-size:x-large; margin-top: 6vh; margin-bottom: 5vh; font-weight: 500;">
+          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        </div>
+        <form name = "submit-to-google-sheet" class = "register-form" style="margin-top:20px; padding-left: 100px; padding-right: 100px; ">
+          <div class="form-row">
+            <div class="form-group col-md-6"> 
+              <label> Team Name* </label> 
+              <input name="team_name" id = "team_name" type="text" class="form-control" placeholder="Team name" required> 
+            </div>          
+            <div class="form-group col-md-6"> 
+              <label for = "no_team"> Number of team members*</label> 
+              <select name="no_team" id="no_team" class="form-control" required>
+                <option value="" disabled selected style="display: none">--Please select an option--</option>
+                <option>5</option>
+                <!-- <option>2</option>
+                <option>3</option>
+                <option>4</option> -->
+              </select> 
+            </div>
+          </div>
+          <div class="form-row "> 
+              <div class="form-group col-md-6"> 
+                <label> Team Leader Name* </label> 
+                <input name="team_leader_name" id="team_leader_name" type="text" class="form-control" placeholder="Name" required> 
+              </div>
+              <div class="form-group col-md-6 "> 
+                <label for="email"> Team Leader Email ID* </label>
+                <input  name="team_leader_email" id="team_leader_email" type = "email" class="form-control" placeholder="Email ID" required>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> 
+              <label> Team Leader Roll number *</label> 
+              <input name="team_leader_roll" id="team_leader_roll" style = "-webkit-appearance: none; -moz-appearance: textfield;" type = "number" class = "form-control" placeholder="Roll Number"> 
+            </div>
+            <div class="form-group col-md-6"> 
+              <label> Team Leader Contact Number* </label> 
+              <input name="team_leader_contact" id="team_leader_contact" type="text" class="form-control" placeholder="Contact Number" pattern="[0-9]{10}" required> 
+            </div>
+          </div>
+
+          <div class="form-row "> 
+            <div class="form-group col-md-6"> 
+              <label> Team Member 2 Name* </label> 
+              <input name="team_member_2_name" id="team_member_2_name" type="text" class="form-control" placeholder="Name" required> 
+            </div>
+            <div class="form-group col-md-6 "> 
+              <label for="email"> Team Member 2 Roll Number* </label>
+              <input name="team_member_2_email" id="team_member_2_email" type="email" class="form-control" placeholder="Email ID" required>
+            </div>
+          </div>
+
+          <div class="form-row "> 
+            <div class="form-group col-md-6"> 
+              <label> Team Member 3 Name* </label> 
+              <input name="team_member_3_name" id="team_member_3_name" type="text" class="form-control" placeholder="Name" required> 
+            </div>
+            <div class="form-group col-md-6 "> 
+              <label for="email"> Team Member 3 Roll Number* </label>
+              <input name="team_member_3_email" id="team_member_3_email" type="email" class="form-control" placeholder="Email ID" required>
+            </div>
+          </div>
+
+          <div class="form-row "> 
+            <div class="form-group col-md-6"> 
+              <label> Team Member 4 Name* </label> 
+              <input name="team_member_4_name" id="team_member_4_name" type="text" class="form-control" placeholder="Name" required> 
+            </div>
+            <div class="form-group col-md-6 "> 
+              <label for="email"> Team Member 4 Roll Number* </label>
+              <input name="team_member_4_email" id="team_member_4_email" type="email" class="form-control" placeholder="Email ID" required>
+            </div>
+          </div>
+
+          <div class="form-row "> 
+            <div class="form-group col-md-6"> 
+              <label> Team Member 5 Name* </label> 
+              <input name="team_member_5_name" id="team_member_5_name" type="text" class="form-control" placeholder="Name" required> 
+            </div>
+            <div class="form-group col-md-6 "> 
+              <label for="email"> Team Member 5 Roll Number* </label>
+              <input name="team_member_5_email" id="team_member_5_email" type="email" class="form-control" placeholder="Email ID" required>
+            </div>
+          </div>
+          <br>
+          <div class="form-group submit" style = "width:100%; align-content: center;"> 
+            <button type="submit" id="btnsbt_" class="btn btn-light"> Submit </button> 
+          </div>
+          <div id="loader_">
+            <div class="loader-wheel_"></div>
+          </div>
+        </form>
+      </div>       
+    </div>  
+  </div>
+
+  <!--Scripts-->
+    <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
+  <script src = "/js/index.js"></script>
+  <script src = "/js/futsal-register.js"></script>
+  <script src = "https://apis.google.com/js/platform.js" async defer></script>
+  <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
+  <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
+</body>

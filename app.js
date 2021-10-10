@@ -21,14 +21,6 @@ app.get("/", async (req,res) => {
     res.render("index");
 });
 
-app.get("/team", async (req,res) => {
-    res.render("team");
-});
-
-app.get("/games", async (req,res) => {
-    res.render("games");
-});
-
 app.get("/login", (req,res) => {
     res.render("login");
 });
@@ -58,6 +50,14 @@ app.get('/logout', (req, res)=>{
 
 app.get("/register", checkAuthenticated, async (req,res) => {
     res.render("register");
+});
+
+app.get("/futsal" , async(reqw,res) => {
+    res.render("futsal");
+});
+
+app.get("/futsal-register" , checkAuthenticated, async(reqw,res) => {
+    res.render("futsal-register");
 });
 
 //Function to check whether the user is authenticated or not.
