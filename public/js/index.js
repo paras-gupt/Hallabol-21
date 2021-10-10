@@ -86,35 +86,35 @@ resume = () =>{
   document.getElementById("openNav").style.display = "inline-block";
 
 
-function sidebar_open() {
+// function sidebar_open() {
 
-    if (currWidth.matches) { // If media query matches
-      document.getElementById("main").style.marginLeft = "100%";
-      document.getElementById("mySidebar").style.width = "100%";
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("openNav").style.display = 'none';
-    } else {
-      document.getElementById("main").style.marginLeft = "15%";
-      document.getElementById("mySidebar").style.width = "15%";
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("openNav").style.display = 'none';
-    }
+//     if (currWidth.matches) { // If media query matches
+//       document.getElementById("main").style.marginLeft = "100%";
+//       document.getElementById("mySidebar").style.width = "100%";
+//       document.getElementById("mySidebar").style.display = "block";
+//       document.getElementById("openNav").style.display = 'none';
+//     } else {
+//       document.getElementById("main").style.marginLeft = "15%";
+//       document.getElementById("mySidebar").style.width = "15%";
+//       document.getElementById("mySidebar").style.display = "block";
+//       document.getElementById("openNav").style.display = 'none';
+//     }
 
-    // document.getElementById("main").style.marginLeft = "20%";
-    // document.getElementById("mySidebar").style.width = "20%";
-    // document.getElementById("mySidebar").style.display = "block";
-    // document.getElementById("openNav").style.display = 'none';
-}
+//     // document.getElementById("main").style.marginLeft = "20%";
+//     // document.getElementById("mySidebar").style.width = "20%";
+//     // document.getElementById("mySidebar").style.display = "block";
+//     // document.getElementById("openNav").style.display = 'none';
+// }
 
-var currWidth = window.matchMedia("(max-width: 1100px)")
+// var currWidth = window.matchMedia("(max-width: 1100px)")
 // sidebar_open(currWidth)
 // currWidth.addEventListener(sidebar_open)
 
-function sidebar_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-}
+// function sidebar_close() {
+//     document.getElementById("main").style.marginLeft = "0%";
+//     document.getElementById("mySidebar").style.display = "none";
+//     document.getElementById("openNav").style.display = "inline-block";
+// }
 
 
 // soccer 1
