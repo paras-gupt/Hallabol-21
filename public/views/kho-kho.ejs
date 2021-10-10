@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset = "UTF-8">
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hallabol '21</title>
-  <link rel = "icon" href = "/images/hallabol-18-logo.png">
+  <link rel="icon" href="/images/hallabol-18-logo.png">
   <!--Bootstrap-->
-  <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel = "stylesheet" href = "css/w3.css">
-  <link rel = "stylesheet" href = "css/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/index.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
     * {
       font-family: 'lato';
     }
-
   </style>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
@@ -29,8 +31,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick='sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -38,21 +41,21 @@
         <span class="tooltip">Search</span>
       </li> -->
       <li>
-        <a href="/">
+        <a href="#">
           <i class='bx bx-home bx-md'></i>
           <span class="links_name">Home</span>
         </a>
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
           <span class="links_name">Teams</span>
         </a>
@@ -60,135 +63,262 @@
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
-      
+
     </ul>
-  </div>
 
-  <div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
+    <div class="navHorList row" id="navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class="list-inline-item">
+            <a href="/">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
 
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+      </div>
     </div>
 
- <!---------------------------------------------------------------------------------------------->
+
+
+  </div>
+
+  <div class="site" style="padding-left: 40px;">
+
+    <!---------------------------------------------------------------------------------------------->
+
+    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar"
+      style="padding-left: 10px;">
+    </div>
+
+    <!---------------------------------------------------------------------------------------------->
 
 
     <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
-            <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-                <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                        class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-                <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
-                </div>
-                <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                    <i class='bx bx-home' style='font-size:100%;'></i></a>
-                <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                    <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-                <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                    <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
-                <% if (user.name != null) { %>
-                  <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
-                <% } else { %>
-                <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
-                    <a href="/login" style="text-decoration: none;">Login</a>
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+        <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+
+          <div class="sectionHeading" style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+            Hallabol '21
+          </div>
+
+          <div style="padding-bottom: 1vw;">
+            <% if (user.name !=null) { %>
+              <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
+              <% } else { %>
+                <div id="login_" style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">
+                  <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
-            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="main" style="font-family : 'poppins';">
+
+        <!---------------------------------------------------------------------------------------------->
+
+        <div class="row sticky-top" style="background-color: transparent; clear: both;">
+          <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()" style="margin-right: 25%;"></button>
         </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+        <div class="w3-container">
+          <div id="first_para"
+            style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
 
- <!---------------------------------------------------------------------------------------------->
-
-      <div class = "row sticky-top" style = "background-color: transparent; clear: both;">
-        <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()" style="margin-right: 25%;"></button>
-      </div>
-
-      <div class="w3-container">
-        <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
-      </div> 
-      <br>
-
-      <div style = "text-align: center;">
-        <a href = "/futsal-register"type="button" class="btn btn-light" style= "  width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
-      </div>
-
- <!---------------------------------------------------------------------------------------------->
-
-      <!-- <div style="width:100%;padding:0; margin: 0; margin-top: 4%;"> -->
-    </div> 
-
-        
-    <br>
-    <footer>
-      <div style="padding-left: 5%; padding-right: 5%;"line><hr><br>
-          <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-              <ul class="list-inline text-center">
-                <li class="list-inline-item" >
-                  <a href="https://www.facebook.com/iitgn.official/" target="_blank" id = "footer-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class='bx bxl-facebook' ></i>
-                      <!-- <i class="bx bxl-facebook"></i> -->
-                    </span>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://iitgn.ac.in/" target="_blank" id = "footer-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class='bx bx-globe' ></i>
-                      <!-- <i class="fa fa-globe fa-stack-1x fa-inverse"></i> -->
-                    </span>
-                  </a>
-                </li>
-                <li class="list-inline-item" >
-                  <a href="mailto:hallabol@iitgn.ac.in" target="_blank" id = "footer-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class='bx bx-mail-send' ></i>
-                      <!-- <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> -->
-                    </span>
-                  </a>
-                </li>
-                <li class="list-inline-item" >
-                  <a href="https://www.youtube.com/user/IITGN1" target="_blank" id = "footer-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class='bx bxl-youtube' ></i>
-                      <!-- <i class="fab fa-youtube fa-stack-1x fa-inverse"></i> -->
-                    </span>
-                  </a>
-                </li>
-              </ul>
-              <p class="copyright text-muted text-center" style="font-size:70%;">Copyright &copy; Hallabol 2021</p>
+            <div class="row justify-content-center" style="margin-left: 6vw;">
+              <div style="font-size: 150%;">
+                Kho-Kho
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <a href="/kho-kho-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
             </div>
+            <br><br>
+
+            <div>Team Formation Rules:<div>
+                <ul>
+                  <li>Teams may contain both male and female players.</li>
+                  <li>The total number of players in each team should be 8 (6 on-field + 2 substitutes).</li>
+                  <li>Team should comprise of players from a minimum of 3 different batches. (eg: BTech ‘18, MTech ‘20, PhD ‘19).</li>
+                </ul>
+
+                <br>
+
+                <div>Game Rules:</div>
+                <ul>
+                  <li>General Kho-Kho rules are applicable.</li>
+                  <li>Each match will consist of two innings of 8 minutes each (4 min chasing + 4 min running (being chased)) for the first 2
+                  rounds of the tournament and 10 minutes each (5 min chasing + 5min running, running => being chased) for the subsequent
+                  rounds.</li>
+                  <li>Both substitute players must play at least one inning.</li>
+                  <li>If 1 girl is running, the team has to run for 30 sec less (1 min, if 2 or more girls) and if 1 girl is chasing, the
+                  opponent team has to run 30 sec more (1 min, if 2 or more girls).</li>
+                  <li>Teams, where all members are women, get a benefit of 4 minutes in case they are playing against a mixed or an all-men's
+                  team. They run for 8 min and chase a 12 min team in all the rounds.</li>
+                </ul>    
+                <br>
+                
+                <div>General Kho-Kho rules:</div>
+                <ul>
+                  <li>All basic Kho-Kho rules are applicable.</li>
+                  <li>An Attacker shall take the Direction to which he turns his Shoulder Line. When the Attacker, while going in a particular
+                  direction, turns his shoulder line through more than a right angle to the direction which he has already taken it shall
+                  be a Foul.</li>
+                  <li>If a Defender is put out as a result of such a Foul or if Foul is committed immediately as a result of the action taken
+                  in putting a defender out, the Defender shall not be declared out.</li>
+                  <li>If you commit a foul in any of the regions between the last lane of the attacker and the end line, you cannot complete
+                  the foul by touching the pole corresponding to the region, you have to either make two consecutive Khos or touch the
+                  pole at the opposite end.</li>
+                  <li>The Attacker who has put out the third (and last) defender shall not chase the new batch. He must give Kho. If he chases
+                  any of the new Defenders, it shall be a Foul.</li>
+                  <li>For chasing turns at any time during the match. The substituted attacker shall not pursue the defenders directly. He
+                  must give a Kho.</li>
+                  <li>If the runner’s even a small portion of the body is inside the field, then he/she will not be out.</li>
+                  <li>During a turn, an Attacker may go out of court but he shall observe all the rules about taking a direction and receding.
+                  The attacker will be allowed to enter the Field/Court as he wants if he goes out of Court beyond the extended post line.
+                  He cannot enter through the Free Zone.</li>
+                  <li>Each side shall enter its Runners simultaneously to the field from the portion marked for them in the lobby (Entry
+                  Zone).</li>
+                  <li>If an Attacker while chasing crosses/touches that line of the Central Lane which lies on the side of his chasing half
+                  the Foul shall not be declared. However, if an Attacker while touching or at the time of touching the Defender or as a
+                  result of the action of putting out a Defender does it, foul shall be declared and Defender will not be declared out.</li>
+                  <li>After giving a perfect Kho if the Chaser while sitting loses the contact of the Cross Lane it shall not be a Foul.</li>
+                </ul>
+                <br>
+                <div><b>Umpires:</b> They supervise the game in their respective halves, divided by the centre line. A foul is indicated by
+                continuous short whistles till the foul is corrected. An "out" is declared by a short whistle.</div>
+                <br>
+                <div><b>Referee: </b>The referee helps the umpires and gives the final decision in case of any difference between them.</div>
+                <br>
+                <div><b>Time-keeper: </b>He keeps the record of time and hands it over to the scorer at the end of an innings. He starts the turn by blowing a
+                whistle: one long and one short. The end of the turn is indicated by a long whistle.</div>
+                <br>
+                <div>These rules are going to be implemented from Semi-final:</div>
+                <ul>
+                  <li>Time to enter the Field (TWO CORRECT KHOS) is given to Runner. Hence the defender who is inside the field can only be
+                  chased after at least one correct Kho is given.</li>
+                  <li>The referee shall have the option to declare out runners of the next batch, who have not entered the field after the two
+                  correct Kho’s are given.</li>
+                  <li>The Runners will continue to enter the field in the same batch till the end of turn. A referee, two umpires, a
+                  timekeeper and one scorer.</li>
+                </ul>
+                <div>For any queries contact :</div>
+                <ul type="none">
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Shubh Lavti | 9664744729</li>
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Deepak Patel | 7000485271</li>
+                </ul>
+
+              </div>
+              <br>
+
+              <div style="text-align: center;">
+                <a href="/kho-kho-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
+
+              <!---------------------------------------------------------------------------------------------->
+
+              <!-- <div style="width:100%;padding:0; margin: 0; margin-top: 4%;"> -->
+            </div>
+
+
+            <br>
+            <footer>
+              <div style="padding-left: 5%; padding-right: 5%;" line>
+                <hr><br>
+                <div class="row">
+                  <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                      <li class="list-inline-item">
+                        <a href="https://www.facebook.com/iitgn.official/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-facebook'></i>
+                            <!-- <i class="bx bxl-facebook"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://iitgn.ac.in/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-globe'></i>
+                            <!-- <i class="fa fa-globe fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="mailto:hallabol@iitgn.ac.in" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-mail-send'></i>
+                            <!-- <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://www.youtube.com/user/IITGN1" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-youtube'></i>
+                            <!-- <i class="fab fa-youtube fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="copyright text-muted text-center" style="font-size:70%;">Copyright &copy; Hallabol 2021
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
           </div>
+        </div>
       </div>
-  </footer> 
 
-      </div>
-    </div>
-  </div>
-
-  <!--Scripts-->
-  <script src = "/js/futsal.js"></script>
-  <script src = "https://apis.google.com/js/platform.js" async defer></script>
-  <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
-  <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
-  <!-- <script>
+      <!--Scripts-->
+      <script src="/js/futsal.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <!-- <script>
     
   </script> -->
 
