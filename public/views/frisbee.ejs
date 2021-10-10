@@ -29,8 +29,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -38,21 +39,21 @@
         <span class="tooltip">Search</span>
       </li> -->
       <li>
-        <a href="/">
+        <a href="#">
           <i class='bx bx-home bx-md'></i>
           <span class="links_name">Home</span>
         </a>
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
           <span class="links_name">Teams</span>
         </a>
@@ -60,56 +61,90 @@
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
       
     </ul>
-  </div>
 
-  <div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
-
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+    <div class="navHorList row" id = "navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class = "list-inline-item">
+            <a href="#">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out' ></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+      
+      </div>
     </div>
 
- <!---------------------------------------------------------------------------------------------->
 
 
-    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
-            <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-                <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                        class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-                <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
-                </div>
-                <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                    <i class='bx bx-home' style='font-size:100%;'></i></a>
-                <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                    <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-                <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                    <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+  </div>
+
+<div class = "site" style="padding-left: 40px;">  
+
+<!---------------------------------------------------------------------------------------------->
+
+  <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+  </div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+  <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+          <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+              
+              <div class="sectionHeading"
+                  style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+                  Hallabol '21
+              </div>
+
+              <div style="padding-bottom: 1vw;">
                 <% if (user.name != null) { %>
                   <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
                 <% } else { %>
                 <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">                    
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
-            </div>
-        </div>
+              </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+          </div>
+      </div>
+
+  <div id = "main"  style= "font-family : 'poppins';">
 
  <!---------------------------------------------------------------------------------------------->
 
@@ -118,13 +153,99 @@
       </div>
 
       <div class="w3-container">
-        <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        <div id="first_para" style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+          
+          <!-- <div style = "text-align: center;">
+            <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+          </div> -->
+          <div class = "row justify-content-center" style="margin-left: 6vw;">
+            <div style="font-size: 150%;">
+              Ultimate Frisbee
+            </div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 col-6">
+            <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+          </div>
+          </div>
+          <br><br>
+          
+          <div>Team Formation Rules:<div>
+          <ul>
+            <li>6 players on-field, 1 substitute. 
+            </li><li>Mixed teams can be formed. However there is no compulsion on having women in the team, although teams must note that there are scoring incentives given to encourage women participation.
+            </li><li>There is no limit on the total number of Inter IIT players in a team. However, the maximum number of Inter IIT players allowed at a time on the field are 2.
+            </li><li>Inter-IIT players who have represented the institute in Table Tennis, Badminton, Chess and Swimming will not be subjected to the inter-IIT constraint.
+</li>
+          
+          </ul> 
+
+          <!-- <br> -->
+          
+          <!-- <div>Pool Players:</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Jitender Kumar</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Rwik Rana</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Prankush Agarwal</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Dhruv Menon</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Vikram Negi</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Akshay</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Preet Shah</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Thenglianmang Haokip</li>
+          </ul> -->
+
+          <br>
+
+          <div>Game Rules:</div>
+          <ul>
+            <br>
+            Starting the Game: 
+          <li>A disc toss decides which team starts the game in the offence or defense and the other team picks the endzone side. 
+          </li><li>Players from both teams must take their positions on the respective end zones.
+          </li><li>At the start of the game, the defense takes possession of the Frisbee. 
+          </li><li>The defense throws the Frisbee disc (pulls) to the offense and the game starts at the point where the disc falls or the player catches the disc. 
+          </li><li>In case the offence player touches the disc before falling or is unable to catch, it is a turnover. (Turnover = Change in possession of disc) 
+          </li><li>When a team scores, they play defence on the next point and change sides. 
+          </li>
+          <br>
+          Passing: 
+          <li>On the first throw of the game or on a throw after any goal scored, a defense player cannot possess the Frisbee disc on first flight. Even if the Frisbee disc touches the ground, the offense gets the first possession. 
+          </li><li>The Frisbee can be passed in any direction.
+          </li><li>If the Frisbee disc goes beyond the borders on the field, it is considered an outside and the possession switches. 
+          </li><li>If a player drops the Frisbee disc, possession switches. 
+          </li><li>A defense player has to maintain a minimum distance equivalent to an arm’s length from the offense player in possession of the Frisbee disc. If the defense player fails to do so, it will be considered a foul. 
+          </li><li>An offensive player is not allowed to run from the position where he/she caught the Frisbee disc and is still in possession of the Frisbee disc. If the offense player does so, it will be considered a foul. 
+          </li><li>An Offense player has only 10 seconds to throw the disc. If the offense player fails to do so, possession will be exchanged 
+          </li><li>If a defense player taps the disc while it is in flight, the possession switches, and the defense becomes the offense and vice-versa. 
+          </li><li>If a defense player taps the disc while it is in the hands of an offensive player, it is a defensive foul and he must restart his count from 1. 
+          </li><li>If a defense player during the defense doesn't clearly count 10 seconds then the offense player can hold the frisbee even longer than 10 seconds without committing a foul. 
+          </li><li>In case of any of the foul mentioned above, the possession switches immediately to the opposite team. 
+          </li><li>If a player commits 3 fouls, he/she is out of the game for the entire 30 minutes. 
+          </li>
+          <br>Scoring: 
+          <li>There are two lines: The Goal-line and the Free-throw-line. 
+          </li><li>Once inside the D-line, the Frisbee has to be caught (not tapped) outside the Goal-line for it to be considered a goal. 
+          </li><li>For every goal scored, the team gets 1 point. If the last person to catch the disc is a woman then the team is awarded 2 points instead of 1. If the person who passes the disc to the player outside the goal line is a woman then the team will be awarded 2 points instead of 1. If the second-last and last person both happen to be women, then the team will be awarded 3 points. 
+          </li><li>After every goal is scored, teams take respective positions on their end zones.</li> 
+          <br>
+          Physical Contact: 
+          <li>No intentional physical contact is allowed between the players (referee’s decision will be final in this regard, no arguments allowed). If so, it will be counted as a foul and a penalty will be awarded to the opposition wherein they can take a shot from the Free-throw-line at the nearest goal post. The game resumes irrespective of whether a goal is scored or not and the possession remains with the opposition.</li>
+          <br>
+          Substitutions: 
+          <li>The total game time is 25 minutes with 2 halves of 10 minutes each and a gap of 5 minutes between the two halves. 
+          </li><li>Substitutes may replace players on the field either after a goal is scored or during an injury timeout.</li> 
+
+          </ul>
+          <br>
+          <div>For any queries contact :</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Manraj Meena| 7734948303</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Aakash | </li>
+          </ul>
+
       </div> 
       <br>
 
       <div style = "text-align: center;">
-        <a href = "/futsal-register"type="button" class="btn btn-light" style= "  width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+        <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
       </div>
 
  <!---------------------------------------------------------------------------------------------->

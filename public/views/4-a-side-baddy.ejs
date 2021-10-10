@@ -29,8 +29,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -38,21 +39,21 @@
         <span class="tooltip">Search</span>
       </li> -->
       <li>
-        <a href="/">
+        <a href="#">
           <i class='bx bx-home bx-md'></i>
           <span class="links_name">Home</span>
         </a>
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
           <span class="links_name">Teams</span>
         </a>
@@ -60,56 +61,90 @@
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
       
     </ul>
-  </div>
 
-  <div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
-
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+    <div class="navHorList row" id = "navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class = "list-inline-item">
+            <a href="#">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out' ></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+      
+      </div>
     </div>
 
- <!---------------------------------------------------------------------------------------------->
 
 
-    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
-            <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-                <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                        class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-                <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
-                </div>
-                <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                    <i class='bx bx-home' style='font-size:100%;'></i></a>
-                <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                    <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-                <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                    <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+  </div>
+
+<div class = "site" style="padding-left: 40px;">  
+
+<!---------------------------------------------------------------------------------------------->
+
+  <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+  </div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+  <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+          <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+              
+              <div class="sectionHeading"
+                  style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+                  Hallabol '21
+              </div>
+
+              <div style="padding-bottom: 1vw;">
                 <% if (user.name != null) { %>
                   <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
                 <% } else { %>
                 <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">                    
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
-            </div>
-        </div>
+              </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+          </div>
+      </div>
+
+  <div id = "main"  style= "font-family : 'poppins';">
 
  <!---------------------------------------------------------------------------------------------->
 
@@ -118,13 +153,73 @@
       </div>
 
       <div class="w3-container">
-        <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        <div id="first_para" style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+          
+          <div class = "row justify-content-center" style="margin-left: 6vw;">
+            <div style="font-size: 150%;">
+              4-a-side-baddy
+            </div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 col-6">
+            <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+          </div>
+          </div>
+          
+          <br><br>
+          <div>Team Formation Rules:<div>
+          <ul>
+            <li>Pool players: Amar Deep Tiwari, Shanti Shwarup Mahto, Prudhvi Sunil, Harsha Bala, Surbhi Khewle, Kshitija Anam.
+            </li><li>There will be 4 players in each team.
+            </li><li>If there’s a non-pool girl in the team they would get an additional advantage of 4 points (i.e the game would start from 4-0) and if there are two or more girls in the team, the team would receive an advantage of 7 points (ie, the game would start from 7-0).
+            </li><li>Two male pool players can not be in a team. A male pool player must include at least 1 non-pool girl. If a male pool player is present in the team then the team will not get any advantage of the girl player/players.
+            </li><li>A girl pool player does not need to include a non-pool girl player. Also, a girl pool player will not get any advantage because of herself. However, if she includes a non-pool player girl/girls then her team will get advantage due to girl player/players.
+            </li><li>There will be no substitutes available, and all 4 need to play at all times.
+            </li><li>Team should comprise of players from a minimum of 2 different batches. (eg: BTech ‘18, MTech ‘20, PhD ‘19
+            </li><li>Faculty and Staff will be considered a different batch.
+            </li><li>Teams can consist of both male and female players.
+          </li></ul> 
+
+          <!-- <br> -->
+          
+          <!-- <div>Pool Players:</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Jitender Kumar</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Rwik Rana</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Prankush Agarwal</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Dhruv Menon</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Vikram Negi</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Akshay</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Preet Shah</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Thenglianmang Haokip</li>
+          </ul> -->
+
+          <br>
+
+          <div>Game Rules:</div>
+          <ul>
+            <li>While the game is on, only one player from both teams can be inside the court.
+            </li><li>The player serving needs to hit 1 more shot after the serve. For other cases a player needs to hit a shot and leave the court, the next player then enters the court from the backside and hits the next shot. The rally continues till one of the players misses the shot.
+            </li><li>If a player enters the court from any side, at most 2 warnings will be given to the team, and thereafter for every fault, the opponent will get the point and the rally will stop.
+            </li><li>The player that wins a rally due to the opponent's error remains on the court for the start of the next point. For every other case, the next teammate comes in to serve.
+            </li><li>The order of the players entering the court will be fixed before starting a set and cannot be changed until the end of that set. You can change the order and discuss strategy before the start of each set.
+            </li><li>If the racquet clashes 2 points are deducted from that team but the rally will continue even after the racquet clash.
+            </li><li>The game will be of 1 set with 25 points till the round of 16.
+            </li><li>The game will be a best of 3 sets with 21 points each from the round of 16. Team which wins 2 sets first will win the match.
+            </li><li>BWF rules of singles will be followed. 
+            </li><li>Time slots would be circulated in advance, and so unnecessary crowd gathering shouldn’t be made. You are free to come and witness others' games, but strictly follow social distancing and always wear masks.
+</li>
+          </ul>
+          <br>
+          <div>For any queries contact :</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Sanjay Venkatesh | 7823991431</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Abhishek Janagal | 9729580542</li>
+          </ul>
+
       </div> 
       <br>
 
       <div style = "text-align: center;">
-        <a href = "/futsal-register"type="button" class="btn btn-light" style= "  width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+        <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
       </div>
 
  <!---------------------------------------------------------------------------------------------->

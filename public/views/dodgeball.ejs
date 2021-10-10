@@ -29,8 +29,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -38,21 +39,21 @@
         <span class="tooltip">Search</span>
       </li> -->
       <li>
-        <a href="/">
+        <a href="#">
           <i class='bx bx-home bx-md'></i>
           <span class="links_name">Home</span>
         </a>
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
           <span class="links_name">Teams</span>
         </a>
@@ -60,56 +61,90 @@
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
       
     </ul>
-  </div>
 
-  <div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
-
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+    <div class="navHorList row" id = "navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class = "list-inline-item">
+            <a href="#">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out' ></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+      
+      </div>
     </div>
 
- <!---------------------------------------------------------------------------------------------->
 
 
-    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
-            <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-                <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                        class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-                <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
-                </div>
-                <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                    <i class='bx bx-home' style='font-size:100%;'></i></a>
-                <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                    <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-                <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                    <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+  </div>
+
+<div class = "site" style="padding-left: 40px;">  
+
+<!---------------------------------------------------------------------------------------------->
+
+  <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+  </div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+  <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+          <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+              
+              <div class="sectionHeading"
+                  style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+                  Hallabol '21
+              </div>
+
+              <div style="padding-bottom: 1vw;">
                 <% if (user.name != null) { %>
                   <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
                 <% } else { %>
                 <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">                    
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
-            </div>
-        </div>
+              </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+          </div>
+      </div>
+
+  <div id = "main"  style= "font-family : 'poppins';">
 
  <!---------------------------------------------------------------------------------------------->
 
@@ -118,13 +153,75 @@
       </div>
 
       <div class="w3-container">
-        <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        <div id="first_para" style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+          <!-- <div style = "text-align: center;">
+            <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+          </div> -->
+          <div class = "row justify-content-center" style="margin-left: 6vw;">
+            <div style="font-size: 150%;">
+              Dodgeball
+            </div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 col-6">
+            <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+          </div>
+          </div>
+
+          <br><br>
+          
+          <div>Team Formation Rules:<div>
+          <ul>
+            <li>Teams can be comprised of both male and female players 
+            </li><li>Every Team must have five players on field and one extra substitute player (5+1). 
+            </li><li>There should be players from minimum two batches in a Team 
+            </li><li>M-tech, PhD and Faculty will be considered different batches. 
+            </li><li>If a team has a girl member in it, the team will have to dodge for 1 min 45 sec instead of 2 min. The time reduced will be 15 sec only in the first round, regardless of the number of girls that you take in your team (refer to game rules). 
+            </li><li>In case of any injury/absence of a player, you may only play with unregistered players only. 
+</li></ul> 
+
+          <!-- <br> -->
+          
+          <!-- <div>Pool Players:</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Jitender Kumar</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Rwik Rana</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Prankush Agarwal</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Dhruv Menon</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Vikram Negi</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Akshay</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Preet Shah</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Thenglianmang Haokip</li>
+          </ul> -->
+
+          <br>
+
+          <div>Game Rules:</div>
+          <ul>
+            <li>Each match consists of 2 games.
+            </li><li>The first game would be a conventional Dodge Ball of 2 mins (If a team has a girl member, the time would be reduced to 1 min 45 sec). 
+            </li><li>The second game will have 2 balls for 1 min. 
+            </li><li>In case of a draw round 2 would be repeated.
+            </li><li>The points would be calculated on the basis of the number of people getting out:
+            </li><li>Those who get hit by the ball below the shoulder level (If they are hit on the head, they won’t be considered as out unless they bring their head intentionally)
+            </li><li>Those who cross over the circle, i.e. the opponents have to be totally aware that they are not out of the circle, if they don’t want to lose a player.
+            </li><li>Those players can join back if that round of play gets over. 
+            </li><li>After every round, that is when the whole team inside gets out, the time will be stopped and they’ll be given 15 seconds to return (time would be stopped for that duration). 
+            </li><li>Team with the minimum points (minimum number of players lost in the total match) will win.
+            </li><li>If all players are out then their time will be noted and the team with more time in the ring will win. 
+            </li><li>Referee’s decision would be the final. 
+</li>
+          </ul>
+          <br>
+          <div>For any queries contact :</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Chetan Kishore | 6266052801</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Pintu Kumar | 9352267636</li>
+          </ul>
+
       </div> 
       <br>
 
       <div style = "text-align: center;">
-        <a href = "/futsal-register"type="button" class="btn btn-light" style= "  width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+        <a href = "/futsal-register"type="button" class="btn btn-light" style= "border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
       </div>
 
  <!---------------------------------------------------------------------------------------------->
