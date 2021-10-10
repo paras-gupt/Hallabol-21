@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+  <title>Hallabol '21</title>
+  <link rel="icon" href="/images/hallabol-18-logo.png">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+      font-family: 'lato';
+    }
+  </style>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-ball'></i>
+      <div class="logo_name">Hallabol!</div>
+      <i class='bx bx-menu' id="btn" onclick='sidebar_open()'></i>
+    </div>
+
+    <ul class="nav-list" style="padding-inline-start: 7px;">
+      <!-- <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="/">
+          <i class='bx bx-home bx-md'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#game">
+          <i class='bx bx-game bx-md'></i>
+          <span class="links_name">Games</span>
+        </a>
+        <span class="tooltip">Games</span>
+      </li>
+      <li>
+        <a href="#team">
+          <i class='bx bx-group bx-md'></i>
+          <span class="links_name">Teams</span>
+        </a>
+        <span class="tooltip">Teams</span>
+      </li>
+      <li>
+        <a href="/logout">
+          <i class='bx bx-log-out bx-md'></i>
+          <span class="links_name">Logout</span>
+        </a>
+        <span class="tooltip">Logout</span>
+      </li>
+
+    </ul>
+
+
+    <div class="navHorList row" id="navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class="list-inline-item">
+            <a href="/">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="site" style="padding-left: 40px;">
+
+    <!---------------------------------------------------------------------------------------------->
+
+    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar"
+      style="padding-left: 10px;">
+    </div>
+
+    <!---------------------------------------------------------------------------------------------->
+
+
+    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+        <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+
+          <div class="sectionHeading" style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+            Hallabol '21
+          </div>
+
+          <div style="padding-bottom: 1vw;">
+            <% if (user.name !=null) { %>
+              <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
+              <% } else { %>
+                <div id="login_" style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">
+                  <a href="/login" style="text-decoration: none;">Login</a>
+                </div>
+                <% } %>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="main" style="font-family : 'poppins';">
+
+        <!---------------------------------------------------------------------------------------------->
+
+        <div class="row sticky-top" style="background-color: transparent; clear: both;">
+          <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()" style="margin-right: 25%;"></button>
+        </div>
+
+        <div class="w3-container">
+          <div id="first_para"
+            style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+            <div class="row justify-content-center" style="margin-left: 6vw;">
+              <div style="font-size: 150%;">
+                Throwball &nbsp;&nbsp;[*Girls Event]
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <a href="/throwball-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
+            </div>
+            <br><br>
+            <div>Team Formation Rules:<div>
+                <ul>
+                  <li>Team should comprise of players from a minimum of 2 different batches. (eg: BTech ‘18, MTech ‘20, PhD ‘19</li>
+                  <li>Faculty and Staff will be considered a different batch.</li>
+                  <li>Teams can only consist of female players.</li>
+
+                </ul>
+
+                <br>
+
+                <div>Game Rules:</div>
+                <ul>
+                  <li>Each team will consist of (4-5) active players.</li>
+                  <li>All the players are required to play with gloves which would be provided by the organising team.</li>
+                  <li>A match shall consist of 3 sets for 25, 25, and 15 points respectively.</li>
+                  <li>Double touch (juggling the ball in both hands) is not allowed while receiving the service ball.</li>
+                  <li>Players cannot catch the ball with the support of their body or legs.</li>
+                  <li>The ball should be served after the whistle and within 5 sec.</li>
+                  <li>The ball should be served after the whistle and within 5 sec.
+                  The ball should be served (Throwing) without crossing the service line with a single hand. The serve should be done
+                  below the shoulder line (underarm).</li>
+                  <li>Each player is allowed a maximum two consecutive serves.</li>
+                  <li>Any ball after catching should be released within 3 seconds with 1 hand. Any ball being released should be done so from
+                  on or above the shoulder line only.</li>
+                  <li>While throwing the ball you could only move 1 step. A player cannot jump when throwing the ball.</li>
+                  <li>The teams have 2 options:</li>
+                  <ul>
+                    <li>Play with all the 5 players on the court, then they have to obey the above rule</li>
+                    <li>Play with 4 players on the court and let 1 pre defined player to allow jump and throw for entire match</li>
+                  </ul>
+                  <li>Internal passing between the team is not allowed.</li>
+                  <li>Players cannot touch the net during the play but the ball can touch the net.</li>
+                  <li>A player while releasing the ball cannot rotate (360 degrees) or turn around to throw the ball.</li>
+                  <li>During catching or releasing, the ball should not touch any part of the body except the palm.</li>
+                  <li>2 players cannot catch the ball simultaneously.</li>
+                  <li>Any ball falling on the sideline or end-line is a good ball.</li>
+                  <li>Umpire decision is final (no exceptions). Even if it was a wrong call from the Umpire, the decision stays.</li>
+                </ul>
+                <br>
+                <div>For any queries contact :</div>
+                <ul type="none">
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Ajay Karwasara | 6377090339</li>
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Nimit Agarwal | 8696168817</li>
+                </ul>
+
+              </div>
+              <br>
+
+              <div style="text-align: center;">
+                <a href="/throwball-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
+
+              <!---------------------------------------------------------------------------------------------->
+
+              <!-- <div style="width:100%;padding:0; margin: 0; margin-top: 4%;"> -->
+            </div>
+
+
+            <br>
+            <footer>
+              <div style="padding-left: 5%; padding-right: 5%;" line>
+                <hr><br>
+                <div class="row">
+                  <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                      <li class="list-inline-item">
+                        <a href="https://www.facebook.com/iitgn.official/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-facebook'></i>
+                            <!-- <i class="bx bxl-facebook"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://iitgn.ac.in/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-globe'></i>
+                            <!-- <i class="fa fa-globe fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="mailto:hallabol@iitgn.ac.in" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-mail-send'></i>
+                            <!-- <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://www.youtube.com/user/IITGN1" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-youtube'></i>
+                            <!-- <i class="fab fa-youtube fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="copyright text-muted text-center" style="font-size:70%;">Copyright &copy; Hallabol 2021
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Scripts-->
+      <script src="/js/futsal.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <!-- <script>
+    
+  </script> -->
+
+</body>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+  <title>Hallabol '21</title>
+  <link rel="icon" href="/images/hallabol-18-logo.png">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+      font-family: 'lato';
+    }
+  </style>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-ball'></i>
+      <div class="logo_name">Hallabol!</div>
+      <i class='bx bx-menu' id="btn" onclick='sidebar_open()'></i>
+    </div>
+
+    <ul class="nav-list" style="padding-inline-start: 7px;">
+      <!-- <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="/">
+          <i class='bx bx-home bx-md'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="/#game">
+          <i class='bx bx-game bx-md'></i>
+          <span class="links_name">Games</span>
+        </a>
+        <span class="tooltip">Games</span>
+      </li>
+      <li>
+        <a href="/#team">
+          <i class='bx bx-group bx-md'></i>
+          <span class="links_name">Teams</span>
+        </a>
+        <span class="tooltip">Teams</span>
+      </li>
+      <li>
+        <a href="/logout">
+          <i class='bx bx-log-out bx-md'></i>
+          <span class="links_name">Logout</span>
+        </a>
+        <span class="tooltip">Logout</span>
+      </li>
+
+    </ul>
+
+
+    <div class="navHorList row" id="navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;">
+          <li class="list-inline-item">
+            <a href="/">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class="list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="site" style="padding-left: 40px;">
+
+    <!---------------------------------------------------------------------------------------------->
+
+    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar"
+      style="padding-left: 10px;">
+    </div>
+
+    <!---------------------------------------------------------------------------------------------->
+
+
+    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+        <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+
+          <div class="sectionHeading" style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+            Hallabol '21
+          </div>
+
+          <div style="padding-bottom: 1vw;">
+            <% if (user.name !=null) { %>
+              <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
+              <% } else { %>
+                <div id="login_" style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">
+                  <a href="/login" style="text-decoration: none;">Login</a>
+                </div>
+                <% } %>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="main" style="font-family : 'poppins';">
+
+        <!---------------------------------------------------------------------------------------------->
+
+        <div class="row sticky-top" style="background-color: transparent; clear: both;">
+          <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()" style="margin-right: 25%;"></button>
+        </div>
+
+        <div class="w3-container">
+          <div id="first_para"
+            style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+            <div class="row justify-content-center" style="margin-left: 6vw;">
+              <div style="font-size: 150%;">
+                Carrom
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <a href="/carrom-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
+            </div>
+            <br><br>
+            <div>Team Formation Rules:<div>
+                <ul>
+                  <li>A team must consist of two members (No batch restriction).</li>
+                </ul>
+
+                <br>
+
+                <div>Game Rules:</div>
+                <div>*C/m shall mean Carromman/ Carrommen (coins). *C/B shall mean Carrom Board.</div>
+                <ul>
+                  <li>How to strike: </li>
+                  <ul>
+                    <li>A striker within the baseline must touch both the front line and the rear line.</li>
+                    <li>While making a stroke, the elbow of the playing hand shall not come within the playing surface nor shall extend beyond
+                    the imaginary lines of the arrow.</li>
+                    <li>Backward strikings are allowed.</li>
+                  </ul>
+                  <li>How to Score:</li>
+                  <ul>
+                    <li>The player who completes pocketing all his C/m first wins the board.</li>
+                    <li>The value/points are as follows:</li>
+                    <ul>
+                      <li>Queen : 3 points</li>
+                      <li>C/m : 1 point each</li>
+                    </ul>
+                  </ul>
+                  <li>At the end of the board the number of C/m of the opponent on the C/B shall be the points gained by that player in that
+                  board.</li>
+                  <li>The player is entitled to be credited with the value of the Queen, only if he wins the board.</li>
+                </ul>
+                <br>
+                <div>Basic rules:</div>
+                <ul>
+                  <li>If the striker pockets the Queen and/or one or more coins, the player retrieves the striker and takes another strike.</li>
+                  <li>If the player pockets no pieces or commits a foul, the turn finishes.</li>
+                  <li>In case of a foul the opponent can put the coin anywhere in the middle circle.</li>
+                </ul>
+
+                <div>Covering the Queen:</div>
+                <ul>
+                  <li>A player may only pocket and cover the Queen if that player has already pocketed at least one his/her own C/m (coin),
+                  otherwise he has to pocket two his/her C/m to cover the
+                  queen.</li>
+                  <li>If a player pockets the Queen and his/her own C/m in the same turn, this counts and that player has covered the Queen.</li>
+                  <li>Queen and cover can be pocketed in the same striking, irrespective of the order of falling of coin in the pockets.</li>
+                  <li>When a player pockets the Queen but does not cover it, the Queen is returned as near as possible to the centre circle by
+                  the opponent.</li>
+                  <li>While covering the Queen by a proper stroke, if a player pockets the striker along with his/her own C/m, the C/m shall
+                  be taken out for placing by the opponent. The player shall, however, continue his turn. If in that subsequent stroke no
+                  C/m of the player is pocketed, the Queen shall not be considered to have been covered and it shall be taken out for
+                  placing.</li>
+                  <li>While covering the Queen, if a player pockets the last C/m of his opponent, he shall lose the Board.</li>
+                </ul>
+
+                <div>DUES AND/OR PENALTIES:</div>
+                <ul>
+                  <li>If in a proper stroke a player pockets his Striker alone, his turn shall be lost and one of his black C/m will be taken
+                  out as penalty by his opponent for placing. Such penalty C/m shall be called Due.</li>
+                  <li>If a player pockets the Striker with his/her own C/m by a proper stroke, the number of C/m so pocketed, with a Due C/m,
+                  shall be taken out for placing and the player shall continue his/her turn.</li>
+                  <li>If a player pockets the Striker with the C/m of his opponent by a proper stroke, the C/m so pocketed shall be deemed to
+                  have been pocketed.His/her turn shall be lost.</li>
+                  <li>If a player pockets the C/m of his/her own or his/her opponent by an improper stroke, the C/m so pocketed shall be
+                  deemed to have been pocketed. The Penalty C/m shall be taken out for placing by the opponent and the player shall lose
+                  his/her turn.</li>
+                  <li>If a player pockets his/her own C/m with the striker by an improper stroke, the C/m so pocketed with two C/m, one as Due
+                  and the other for Penalty shall be taken out for placing by the opponent and the player shall lose his turn.</li>
+                  <li>If a player touches the last piece directly before the queen, a penalty of his/her own C/m shall be taken out for
+                  placing by the opponent.</li>
+                  <li>If the Queen and the Striker are pocketed together by a proper stroke, the Queen shall be taken out for placing by the
+                  Umpire. An additional C/m of his/her colour shall be taken out for placing by the opponent and the player shall continue
+                  his turn.</li>
+                </ul>
+                
+                <br>
+                <div>General Rules:</div>
+                <ul>
+                  <li>If a C/m and/or Queen jump out of the playing surface, the jumped C/m and/or the Queen shall be placed by the Umpire in
+                  the Centre Circle, if space permits, covering it fully or the maximum portion of it that is available.</li>
+                  <li>The winner of a board collects one point for each of the opponent's carrom men left at the finish and three points for
+                  the queen if covered by the winner (if covered by the loser, no-one gets those points).</li>
+                </ul>
+                <br>
+                <div>Game Format:</div>
+                <div>All matches till the Quarter-Finals are knock-out matches having a time limit of 10 minutes. The team which wins moves
+                to the next level. In the Semi-Finals, each team will play with all other three teams (League matches), each match
+                consisting of three rounds (Boards) and the team that wins two out of three wins the match. Final will be a 24 point
+                game with at most 10 Boards.</div>
+                <div>*There is a chance of having a lucky loser.</div>
+                <br>
+                <div>For any queries contact :</div>
+                <ul type="none">
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Rohan Shirodkar| 9136241283</li>
+                  <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i> Ksheer Sagar Agarwal| 7738730382</li>
+                </ul>
+
+              </div>
+              <br>
+
+              <div style="text-align: center;">
+                <a href="/carrom-register" type="button" class="btn btn-light"
+                  style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+              </div>
+
+              <!---------------------------------------------------------------------------------------------->
+
+              <!-- <div style="width:100%;padding:0; margin: 0; margin-top: 4%;"> -->
+            </div>
+
+
+            <br>
+            <footer>
+              <div style="padding-left: 5%; padding-right: 5%;" line>
+                <hr><br>
+                <div class="row">
+                  <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                      <li class="list-inline-item">
+                        <a href="https://www.facebook.com/iitgn.official/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-facebook'></i>
+                            <!-- <i class="bx bxl-facebook"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://iitgn.ac.in/" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-globe'></i>
+                            <!-- <i class="fa fa-globe fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="mailto:hallabol@iitgn.ac.in" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bx-mail-send'></i>
+                            <!-- <i class="fa fa-envelope fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://www.youtube.com/user/IITGN1" target="_blank" id="footer-icon">
+                          <span class="fa-stack fa-lg">
+                            <i class='bx bxl-youtube'></i>
+                            <!-- <i class="fab fa-youtube fa-stack-1x fa-inverse"></i> -->
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="copyright text-muted text-center" style="font-size:70%;">Copyright &copy; Hallabol 2021
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Scripts-->
+      <script src="/js/futsal.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <!-- <script>
+    
+  </script> -->
+
+</body>

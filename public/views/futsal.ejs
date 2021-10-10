@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset = "UTF-8">
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <meta name = "viewport" content = "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
   <title>Hallabol '21</title>
   <link rel = "icon" href = "/images/hallabol-18-logo.png">
   <!--Bootstrap-->
@@ -29,8 +29,9 @@
     <div class="logo-details">
       <i class='bx bxl-ball'></i>
       <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+      <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
     </div>
+
     <ul class="nav-list" style="padding-inline-start: 7px;">
       <!-- <li>
         <i class='bx bx-search'></i>
@@ -45,14 +46,14 @@
         <span class="tooltip">Home</span>
       </li>
       <li>
-        <a href="/#game">
+        <a href="#game">
           <i class='bx bx-game bx-md'></i>
           <span class="links_name">Games</span>
         </a>
         <span class="tooltip">Games</span>
       </li>
       <li>
-        <a href="/#team">
+        <a href="#team">
           <i class='bx bx-group bx-md'></i>
           <span class="links_name">Teams</span>
         </a>
@@ -60,56 +61,90 @@
       </li>
       <li>
         <a href="/logout">
-          <i class='bx bx-log-out' ></i>
+          <i class='bx bx-log-out bx-md'></i>
           <span class="links_name">Logout</span>
         </a>
         <span class="tooltip">Logout</span>
       </li>
       
     </ul>
-  </div>
 
-  <div class = "site" style="padding-left: 40px;">  
 
- <!---------------------------------------------------------------------------------------------->
-
-    <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+    <div class="navHorList row" id = "navHorList">
+      <div class="col-lg-8 col-md-10">
+        <ul class="list-inline text-center" display: inline;>
+          <li class = "list-inline-item">
+            <a href="/">
+              <i class='bx bx-home bx-md'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/#game">
+              <i class='bx bx-game bx-md'></i>
+              <span class="links_name">Games</span>
+            </a>
+            <span class="tooltip">Games</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/#team">
+              <i class='bx bx-group bx-md'></i>
+              <span class="links_name">Teams</span>
+            </a>
+            <span class="tooltip">Teams</span>
+          </li>
+          <li class = "list-inline-item">
+            <a href="/logout">
+              <i class='bx bx-log-out' ></i>
+              <span class="links_name">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+          </li>
+        </ul>
+      
+      </div>
     </div>
 
- <!---------------------------------------------------------------------------------------------->
 
 
-    <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
-        <div class="row sticky-top" style="background-color: black; clear: both;">
-            <div class="navbar"
-                style="width : 100%; padding-right: 2vw; align-content: center; padding-left: 18%;">
-                <!-- <button id="openNav" class="w3-large" onclick="sidebar_open()" style="margin-right: 25%;"><i
-                        class="bx bx-trophy" style="font-size:50px; margin-top: 10px;"></i></button> -->
-                <div class="sectionHeading"
-                    style="width : 27vw; text-align: center;margin-left: auto; margin-right: auto;font-size: 1.2em;">
-                    Hallabol
-                </div>
-                <!-- <a href="#" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 9vw; padding:0px">Home
-                    <i class='bx bx-home' style='font-size:100%;'></i></a>
-                <a href="#game" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em;width: 8.6vw; padding:0px ; margin-left: 20px;">Games
-                    <i class='bx bx-game' style="font-size:80%; margin-right: 1vw;"></i></a>
-                <a href="#team" class="w3-bar-item w3-hover-green w3-mobile"
-                    style="text-decoration : none; text-align: center; font-size: 0.75em; width: 9vw; padding:0px">Team
-                    <i class='bx bx-group bx-sm' style='font-size:80%; margin-bottom: -10px;'></i></a> -->
+  </div>
+
+<div class = "site" style="padding-left: 40px;">  
+
+<!---------------------------------------------------------------------------------------------->
+
+  <div class="sidebarFont w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id = "mySidebar" style= "padding-left: 10px;">
+  </div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+  <div id="main" style="font-family : 'poppins'; position: sticky; top: 0 !important;">
+
+      <div class="row sticky-top" style="background-color: #090A0B; clear: both;">
+          <div class="navbar" style="width : 100%; padding-right: 4vw; align-content: center;">
+              
+              <div class="sectionHeading"
+                  style="width : 27vw;margin-left: 30vw; text-align: center; font-size: 1em;">
+                  Hallabol '21
+              </div>
+
+              <div style="padding-bottom: 1vw;">
                 <% if (user.name != null) { %>
                   <a href="" style="text-decoration: none; font-size: 0.8em;"> Logged In! </a>
                 <% } else { %>
                 <div  id = "login_"
-                    style="color:black ; text-align: center; font-weight:700; font-size: 0.8em;">                    
+                    style="color:#090A0B ; text-align: center; font-weight:700; font-size: 0.8em;">                    
                     <a href="/login" style="text-decoration: none;">Login</a>
                 </div>
                 <% } %>
-            </div>
-        </div>
+              </div>
 
-    <div id = "main"  style= "font-family : 'poppins';">
+          </div>
+      </div>
+
+  <div id = "main"  style= "font-family : 'poppins';">
 
  <!---------------------------------------------------------------------------------------------->
 
@@ -118,13 +153,76 @@
       </div>
 
       <div class="w3-container">
-        <div id="first_para" style="margin-left:5%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
-          Futsal is played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted.
+        <div id="first_para" style="margin-left:5%; font-size: 80%; margin-right: 5%; margin-top: 5%; margin-bottom: 3%; font-weight: 300;">
+          <div class="row justify-content-center" style="margin-left: 6vw;">
+            <div style="font-size: 150%;">
+              Futsal
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+              <a href="/futsal-register" type="button" class="btn btn-light"
+                style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+            </div>
+          </div>
+          <br><br>
+          <div>Team Formation Rules:<div>
+          <ul>
+            <li>Teams can consist of both male and female players</li>
+            <li>A team will comprise 4 on-field players and 1 substitute (A total of 5 per team).</li>
+            <li>A team should comprise players from a minimum of 2 different batches.</li>
+            <li>Staff and faculty (non-pool players) can form their own teams without any batch restrictions</li>
+            <li>A team can consist of at most 2 pool players.</li>
+            <li>A team with 2 pool players is mandated to have at least one girl in their formation for at least one-half of the game.</li>
+
+            <li>No player shall use their hand at any point during the game i.e. There must not be any goalkeeper in the team. </li>
+
+          </ul> 
+
+          <br>
+          
+          <div>Pool Players:</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Jitender Kumar</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Rwik Rana</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Prankush Agarwal</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Dhruv Menon</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Vikram Negi</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Akshay</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Preet Shah</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Thenglianmang Haokip</li>
+          </ul>
+
+          <br>
+
+          <div>Game Rules:</div>
+          <ul>
+            <li>There will be 2 halves of 10 minutes each, with a half-time break of 5 minutes in between. </li>
+            <li>When the ball hits the basket in the court, it will be considered as out</li>
+            <li>Normal football rules are applicable with the exception of the off-side rule.</li>
+            <li>In case of outside, the team should start the play with a kick from the outside line.</li>
+            <li>A player can score a goal only after entering the opposite team's half of the court.</li>
+            <li>A team committing a total of 5 fouls will be awarded a one-step penalty against them.</li>
+            <li>The penalty has to be a one-step penalty taken from the center of the court.</li>
+            <li>Any kind of disrespect to the game will be awarded a yellow card.</li>
+            <li>A player awarded with a yellow card will have to be substituted for the next two minutes during the match.</li>
+            <li>2 yellow cards in one game will result in a red card, meaning the player will sit out and the team will have to play with one player less for the rest of the match.</li>
+            <li>In case of a draw, any 3 of the members of the team will participate in a penalty shoot-out (One-step penalties).</li>
+            <li>Rolling substitutions are allowed.</li>
+            <li>There will not be any re-take for an incorrect one-step penalty.</li>
+            <li>The referee has the final say in any kind of conflict or confusion during the game.</li>
+          </ul>
+          <br>
+          <div>For any queries contact :</div>
+          <ul type = "none">
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Shubh Lavti | 9664744729</li>
+            <li><i class='bx bx-right-arrow-alt' style="width: 4vw;"></i>Deepak Patel | 7000485271</li>
+          </ul>
+
       </div> 
       <br>
 
-      <div style = "text-align: center;">
-        <a href = "/futsal-register"type="button" class="btn btn-light" style= "  width:20vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
+      <div style="text-align: center;">
+        <a href="/futsal-register" type="button" class="btn btn-light"
+          style="border-radius: 20vw;  font-size: 100%;font-weight: 900;width:27vw; margin-right: auto; margin-left: auto; display: block;">Register</a>
       </div>
 
  <!---------------------------------------------------------------------------------------------->
