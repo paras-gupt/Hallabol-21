@@ -17,8 +17,11 @@ const {OAuth2Client} = require('google-auth-library');
 const CLIENT_ID = '473236609433-9gom3rgoo2h0iacdpqo5e9hqt6hqa00k.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
+var user = {};
 app.get("/", async (req,res) => {
-    res.render("index");
+    if (req.user != null){user = req.user};
+    // console.log(user.name);
+    res.render("index", {user: user});
 });
 
 app.get("/login", (req,res) => {
@@ -34,30 +37,33 @@ app.post("/login", (req,res) => {
             audience: CLIENT_ID,
         });
         const payload = ticket.getPayload();
+        user.name = payload.name;
+        user.email = payload.email;
+        user.picture = payload.picture;
         const userid = payload['sub'];
         //console.log(payload);
     }
     verify().then(() => {
         res.cookie('session-token', token);
         res.send('success');
+        req.user = user;
     }).catch(console.error);
 });
 
 app.get('/logout', (req, res)=>{
     res.clearCookie('session-token');
-    res.redirect('/login');
-})
-
-app.get("/register", checkAuthenticated, async (req,res) => {
-    res.render("register");
+    user = {};
+    res.redirect('/');
+}) 
+ 
+app.get("/futsal" , async(req,res) => {
+    if (req.user != null){user = req.user};
+    res.render("futsal", {user: user});
 });
 
-app.get("/futsal" , async(reqw,res) => {
-    res.render("futsal");
-});
-
-app.get("/futsal-register" , checkAuthenticated, async(reqw,res) => {
-    res.render("futsal-register");
+app.get("/futsal-register" , checkAuthenticated, async(req,res) => {
+    if (req.user != null){user = req.user};
+    res.render("futsal-register", {user:user});
 });
 
 //Function to check whether the user is authenticated or not.
