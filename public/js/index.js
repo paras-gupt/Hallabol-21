@@ -441,8 +441,9 @@ function sidebar_open() {
 // sidebar_open(currWidth)
 // currWidth.addEventListener(sidebar_open)
 
-// function sidebar_close() {
-//     document.getElementById("main").style.marginLeft = "0%";
-//     document.getElementById("mySidebar").style.display = "none";
-//     document.getElementById("openNav").style.display = "inline-block";
-// }
+function sidebar_close_on_itemclick() {
+  var x = document.getElementById("navHorList");
+  if (screen.width < 700) {
+    document.getElementById("navHorList").style.display = "none";
+  }
+}
