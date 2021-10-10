@@ -22,6 +22,11 @@ div.gameName{
 text-align: center; margin-top: 2vw; font-size: 3.5vh;
 }
 
+div.gameName:hover{
+  color: #96dced;
+  cursor: pointer;
+}
+
 .setionHeading{
 font-weight: 600;margin-top:10vh; margin-bottom: 5vh; padding-left: 5vw; padding-right: 5vw; padding-bottom: 3vh;
 }
@@ -74,8 +79,13 @@ margin-bottom: 6vh;
 }
 
 .tagStag{
-font-size: 3.5vh;
+font-size: 3vh;
+font-family: 'Lato';
 }
+.tagStag-email{
+  font-size: 2.5vh;
+  font-family: 'Lato';
+  }
 
 .carousel-inner img{
 height: 55vw;
@@ -435,4 +445,9 @@ a:hover{
     position: sticky; top: 0;
   } */
 
+}
+
+.heading-sites{
+  font-size: 1.1em;
+  font-family: 'poppins';
 }
