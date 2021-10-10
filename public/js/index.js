@@ -117,7 +117,23 @@ resume = () =>{
 // }
 
 
+// var currWidth = window.matchMedia("(max-width: 700px)")
+
+// if (currWidth.matches) { // If media query matches
+//   document.getElementById("main").style.marginLeft = "100%";
+//   document.getElementById("sidebar").style.width = "100%";
+//   document.getElementById("mySidebar").style.display = "block";
+//   document.getElementById("openNav").style.display = 'none';
+// } else {
+//   document.getElementById("main").style.marginLeft = "15%";
+//   document.getElementById("sidebar").style.width = "15%";
+//   document.getElementById("mySidebar").style.display = "block";
+//   document.getElementById("openNav").style.display = 'none';
+// }
+
+
 // soccer 1
+
 
 TweenMax.set("#soccer1", { opacity: 1 });
 
@@ -371,6 +387,8 @@ function init() {
 
 init();
 
+// /////////////////////////////////////////////////////
+
 let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
@@ -390,3 +408,41 @@ let sidebar = document.querySelector(".sidebar");
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
       }
     }
+
+
+var currWidth = window.matchMedia("(max-width: 700px)")
+function sidebar_open() {
+  var x = document.getElementById("navHorList");
+  var open = false;
+  if(window.getComputedStyle(x).display === "none"){
+    console.log('hey')
+    open = true;
+  }
+    console.log(open)
+    if(open == true){
+      console.log(screen.width);
+      if (screen.width < 700) { // If media query matches
+        console.log('hy');
+        setTimeout(() => {console.log("haha");}, 1000);
+        document.getElementById("navHorList").style.display = "block";
+        open = false;
+      } 
+    } else{
+      if (screen.width < 700) { // If media query matches
+        console.log('hyasjhadffdkh');
+        document.getElementById("navHorList").style.display = "none";
+        open = true;
+      } 
+    }
+
+    
+}
+
+// sidebar_open(currWidth)
+// currWidth.addEventListener(sidebar_open)
+
+// function sidebar_close() {
+//     document.getElementById("main").style.marginLeft = "0%";
+//     document.getElementById("mySidebar").style.display = "none";
+//     document.getElementById("openNav").style.display = "inline-block";
+// }

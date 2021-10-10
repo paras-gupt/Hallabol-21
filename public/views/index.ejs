@@ -25,49 +25,92 @@
 
 <body>
 
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-ball'></i>
-      <div class="logo_name">Hallabol!</div>
-      <i class='bx bx-menu' id="btn"></i>
+
+  
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-ball'></i>
+        <div class="logo_name">Hallabol!</div>
+        <i class='bx bx-menu' id="btn" onclick = 'sidebar_open()'></i>
+      </div>
+
+      <ul class="nav-list" style="padding-inline-start: 7px;">
+        <!-- <li>
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li> -->
+        <li>
+          <a href="#">
+            <i class='bx bx-home bx-md'></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#game">
+            <i class='bx bx-game bx-md'></i>
+            <span class="links_name">Games</span>
+          </a>
+          <span class="tooltip">Games</span>
+        </li>
+        <li>
+          <a href="#team">
+            <i class='bx bx-group bx-md'></i>
+            <span class="links_name">Teams</span>
+          </a>
+          <span class="tooltip">Teams</span>
+        </li>
+        <li>
+          <a href="/logout">
+            <i class='bx bx-log-out' ></i>
+            <span class="links_name">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+        
+      </ul>
+
+
+      <div class="navHorList row" id = "navHorList">
+        <div class="col-lg-8 col-md-10">
+          <ul class="list-inline text-center" display: inline;">
+            <li class = "list-inline-item">
+              <a href="#">
+                <i class='bx bx-home bx-md'></i>
+                <span class="links_name">Home</span>
+              </a>
+              <span class="tooltip">Home</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="#game">
+                <i class='bx bx-game bx-md'></i>
+                <span class="links_name">Games</span>
+              </a>
+              <span class="tooltip">Games</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="#team">
+                <i class='bx bx-group bx-md'></i>
+                <span class="links_name">Teams</span>
+              </a>
+              <span class="tooltip">Teams</span>
+            </li>
+            <li class = "list-inline-item">
+              <a href="/logout">
+                <i class='bx bx-log-out' ></i>
+                <span class="links_name">Logout</span>
+              </a>
+              <span class="tooltip">Logout</span>
+            </li>
+          </ul>
+        
+        </div>
+      </div>
+
+
+
     </div>
-    <ul class="nav-list" style="padding-inline-start: 7px;">
-      <!-- <li>
-        <i class='bx bx-search'></i>
-        <input type="text" placeholder="Search...">
-        <span class="tooltip">Search</span>
-      </li> -->
-      <li>
-        <a href="#">
-          <i class='bx bx-home bx-md'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="#game">
-          <i class='bx bx-game bx-md'></i>
-          <span class="links_name">Games</span>
-        </a>
-        <span class="tooltip">Games</span>
-      </li>
-      <li>
-        <a href="#team">
-          <i class='bx bx-group bx-md'></i>
-          <span class="links_name">Teams</span>
-        </a>
-        <span class="tooltip">Teams</span>
-      </li>
-      <li>
-        <a href="/logout">
-          <i class='bx bx-log-out' ></i>
-          <span class="links_name">Logout</span>
-        </a>
-        <span class="tooltip">Logout</span>
-      </li>
-      
-    </ul>
-  </div>
 
   <div class = "site" style="padding-left: 40px;">  
 

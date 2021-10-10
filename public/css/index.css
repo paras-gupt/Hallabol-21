@@ -397,3 +397,49 @@ a:hover{
   text-decoration: none;
   color: inherit;
 }
+
+#navHorList{
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-list {
+      display:none;
+  }
+
+  /* .navHorList{
+    display:block;
+  } */
+
+  .sidebar{
+    height: 5vh;
+    background-color: black;
+  }
+
+  .site{
+    /* top:10vh; */
+    left:0%;
+    width: 100%;
+  }
+
+  .sidebar.open ~ .site{
+    left: 0%;
+    width: 100%;
+    top: 10vh;
+    height: calc(100% - 20vh);
+    /* height: 80%; */
+    /* margin-top: 20%; */
+  }
+
+  
+
+  .sidebar.open{
+    width: 100vw;
+    height: 20vh;
+  }
+/* 
+  #stickyTop{
+    position: sticky; top: 0;
+  } */
+
+}
