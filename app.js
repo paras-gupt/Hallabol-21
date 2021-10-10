@@ -78,6 +78,114 @@ app.get("/futsal-register" , checkAuthenticated, async(req,res) => {
     res.render("futsal-register", {user:user});
 });
 
+app.get("/4-a-side-baddy" , async(req,res) => {
+    lastvisitedroute = '/4-a-side-baddy';
+    if (req.user != null){user = req.user};
+    res.render("4-a-side-baddy", {user: user});
+});
+
+app.get("/4-a-side-baddy-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/4-a-side-baddy-register';
+    if (req.user != null){user = req.user};
+    res.render("4-a-side-baddy-register", {user:user});
+});
+
+app.get("/carrom" , async(req,res) => {
+    lastvisitedroute = '/carrom';
+    if (req.user != null){user = req.user};
+    res.render("carrom", {user: user});
+});
+
+app.get("/carrom-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/carrom-register';
+    if (req.user != null){user = req.user};
+    res.render("carrom-register", {user:user});
+});
+
+app.get("/dodgeball" , async(req,res) => {
+    lastvisitedroute = '/dodgeball';
+    if (req.user != null){user = req.user};
+    res.render("dodgeball", {user: user});
+});
+
+app.get("/dodgeball-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/dodgeball-register';
+    if (req.user != null){user = req.user};
+    res.render("dodgeball-register", {user:user});
+});
+
+app.get("/foot-volley" , async(req,res) => {
+    lastvisitedroute = '/foot-volley';
+    if (req.user != null){user = req.user};
+    res.render("foot-volley", {user: user});
+});
+
+app.get("/foot-volley-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/foot-volley-register';
+    if (req.user != null){user = req.user};
+    res.render("foot-volley-register", {user:user});
+});
+
+app.get("/frisbee" , async(req,res) => {
+    lastvisitedroute = '/frisbee';
+    if (req.user != null){user = req.user};
+    res.render("frisbee", {user: user});
+});
+
+app.get("/frisbee-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/frisbee-register';
+    if (req.user != null){user = req.user};
+    res.render("frisbee-register", {user:user});
+});
+
+app.get("/gully-cricket" , async(req,res) => {
+    lastvisitedroute = '/gully-cricket';
+    if (req.user != null){user = req.user};
+    res.render("gully-cricket", {user: user});
+});
+
+app.get("/gully-cricket-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/gully-cricket-register';
+    if (req.user != null){user = req.user};
+    res.render("gully-cricket-register", {user:user});
+});
+
+app.get("/kho-kho" , async(req,res) => {
+    lastvisitedroute = '/kho-kho';
+    if (req.user != null){user = req.user};
+    res.render("kho-kho", {user: user});
+});
+
+app.get("/kho-kho-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/kho-kho-register';
+    if (req.user != null){user = req.user};
+    res.render("kho-kho-register", {user:user});
+});
+
+app.get("/seven-stones" , async(req,res) => {
+    lastvisitedroute = '/seven-stones';
+    if (req.user != null){user = req.user};
+    res.render("seven-stones", {user: user});
+});
+
+app.get("/seven-stones-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/seven-stones-register';
+    if (req.user != null){user = req.user};
+    res.render("seven-stones-register", {user:user});
+});
+
+app.get("/throwball" , async(req,res) => {
+    lastvisitedroute = '/throwball';
+    if (req.user != null){user = req.user};
+    res.render("throwball", {user: user});
+});
+
+app.get("/throwball-register" , checkAuthenticated, async(req,res) => {
+    lastvisitedroute = '/throwball-register';
+    if (req.user != null){user = req.user};
+    res.render("throwball-register", {user:user});
+});
+
 //Function to check whether the user is authenticated or not.
 function checkAuthenticated(req, res, next){
     let token = req.cookies['session-token'];
