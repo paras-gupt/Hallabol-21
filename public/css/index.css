@@ -195,6 +195,16 @@ margin-right: 15px;
 /* background-color: cadetblue; */
 }
 
+#logout_ {
+  color: black;
+  margin-right: 30;
+  background-color: white;
+  border-radius: 8px;
+  width: 90px;
+  margin-right: 15px;
+  /* background-color: cadetblue; */
+  }
+
 .sectionHeading{
 font-family: "poppins";
 }
@@ -218,7 +228,7 @@ z-index: 99;
 transition: all 0.5s ease;
 }
 .sidebar.open{
-width: 300px;
+width: 250px;
 }
 .sidebar .logo-details{
 height: 60px;
@@ -259,7 +269,7 @@ size: 20px;
 .sidebar i{
 color: #fff;
 height: 60px;
-min-width: 50px;
+min-width: 70px;
 font-size: 28px;
 text-align: center;
 line-height: 60px;
@@ -331,7 +341,7 @@ background: #11101D;
 background: #FFF;
 }
 .sidebar li a .links_name{
-color: black;
+color: white;
 font-size: 15px;
 font-weight: 400;
 white-space: nowrap;
