@@ -392,10 +392,32 @@ init();
 let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
+    // let homeBtn = document.querySelector("#home");
+    let gameBtn = document.querySelector("#id_game");
+    let teamBtn = document.querySelector("#id_team");
+    
     closeBtn.addEventListener("click", () => {
       sidebar.classList.toggle("open");
       menuBtnChange();//calling the function(optional)
     });
+
+    // homeBtn.addEventListener("click", () => {
+    //   sidebar.classList.toggle("open");
+    //   menuBtnChange();//calling the function(optional)
+    // });
+
+    gameBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+      document.getElementById("navHorList").style.display = "none";
+    });
+
+    teamBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+      document.getElementById("navHorList").style.display = "none";
+    });
+
     searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
       sidebar.classList.toggle("open");
       menuBtnChange(); //calling the function(optional)
