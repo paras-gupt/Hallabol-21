@@ -204,7 +204,8 @@ color: #090A0B;
 margin-right: 10px;
 background-color: white;
 border-radius: 8px;
-width: 90px;
+width: 10%;
+padding: 1% 2% 1% 2%;
 /* background-color: cadetblue; */
 }
 
@@ -346,7 +347,7 @@ transition: all 0.4s ease;
 background: #090A0B;
 }
 .sidebar li a:hover{
-background: black;
+background: white;
 }
 .sidebar li a .links_name{
 color: white;
@@ -365,6 +366,7 @@ pointer-events: auto;
 .sidebar li a:hover i{
 transition: all 0.5s ease;
 color: #090A0B;
+
 }
 .sidebar li i{
 height: 50px;
