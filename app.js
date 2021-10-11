@@ -23,14 +23,14 @@ var user = {};
 var lastvisitedroute = "/";
 var loginclick = false;
 router.get("/", async (req,res) => {
-    if (req.user != null){user = req.user};
+    // if (req.user != null){user = req.user};
     // console.log(user.name);
-    if(loginclick == false){
+    // if(loginclick == false){
         res.render("index", {user: user});
-    } else{
-        loginclick = false;
-        res.redirect(lastvisitedroute);
-    }
+    // } else{
+    //     loginclick = false;
+        // res.redirect(lastvisitedroute);
+    // }
     
 });
 
